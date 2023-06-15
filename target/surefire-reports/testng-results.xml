@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2023-06-13T09:55:05 CLT" name="Sample Test Suite" finished-at="2023-06-13T09:56:11 CLT" duration-ms="66205">
+    <groups>
+    </groups>
+    <test started-at="2023-06-13T09:55:05 CLT" name="Test Automation" finished-at="2023-06-13T09:56:11 CLT" duration-ms="66205">
+      <class name="test.java.carritocompras.CC_Test">
+        <test-method is-config="true" signature="beforeTestMethod()[pri:0, instance:test.java.carritocompras.CC_Test@7193666c]" started-at="2023-06-13T09:55:05 CLT" name="beforeTestMethod" finished-at="2023-06-13T09:55:05 CLT" duration-ms="105" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTestMethod -->
+        <test-method is-config="true" signature="beforeMethodMethod(java.lang.String,java.lang.reflect.Method)[pri:0, instance:test.java.carritocompras.CC_Test@7193666c]" started-at="2023-06-13T09:55:05 CLT" name="beforeMethodMethod" finished-at="2023-06-13T09:55:07 CLT" duration-ms="1517" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[public void test.java.carritocompras.CC_Test.CC_QA_Automatizacion(java.lang.String[]) throws java.lang.InterruptedException]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethodMethod -->
+        <test-method signature="CC_QA_Automatizacion([Ljava.lang.String;)[pri:0, instance:test.java.carritocompras.CC_Test@7193666c]" started-at="2023-06-13T09:55:07 CLT" name="CC_QA_Automatizacion" data-provider="Data" finished-at="2023-06-13T09:55:26 CLT" duration-ms="19712" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[Ljava.lang.String;@69c93ca4]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- CC_QA_Automatizacion -->
+        <test-method is-config="true" signature="afterMethodMethod(org.testng.ITestResult)[pri:0, instance:test.java.carritocompras.CC_Test@7193666c]" started-at="2023-06-13T09:55:26 CLT" name="afterMethodMethod" finished-at="2023-06-13T09:55:27 CLT" duration-ms="126" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=CC_QA_Automatizacion status=SUCCESS method=CC_Test.CC_QA_Automatizacion([Ljava.lang.String;)[pri:0, instance:test.java.carritocompras.CC_Test@7193666c] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethodMethod -->
+        <test-method is-config="true" signature="beforeMethodMethod(java.lang.String,java.lang.reflect.Method)[pri:0, instance:test.java.carritocompras.CC_Test@7193666c]" started-at="2023-06-13T09:55:27 CLT" name="beforeMethodMethod" finished-at="2023-06-13T09:55:28 CLT" duration-ms="1170" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[public void test.java.carritocompras.CC_Test.CC_QA_Automatizacion(java.lang.String[]) throws java.lang.InterruptedException]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethodMethod -->
+        <test-method signature="CC_QA_Automatizacion([Ljava.lang.String;)[pri:0, instance:test.java.carritocompras.CC_Test@7193666c]" started-at="2023-06-13T09:55:28 CLT" name="CC_QA_Automatizacion" data-provider="Data" finished-at="2023-06-13T09:55:49 CLT" duration-ms="21713" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[Ljava.lang.String;@60e5272]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- CC_QA_Automatizacion -->
+        <test-method is-config="true" signature="afterMethodMethod(org.testng.ITestResult)[pri:0, instance:test.java.carritocompras.CC_Test@7193666c]" started-at="2023-06-13T09:55:50 CLT" name="afterMethodMethod" finished-at="2023-06-13T09:55:50 CLT" duration-ms="126" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=CC_QA_Automatizacion status=SUCCESS method=CC_Test.CC_QA_Automatizacion([Ljava.lang.String;)[pri:0, instance:test.java.carritocompras.CC_Test@7193666c] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethodMethod -->
+        <test-method is-config="true" signature="beforeMethodMethod(java.lang.String,java.lang.reflect.Method)[pri:0, instance:test.java.carritocompras.CC_Test@7193666c]" started-at="2023-06-13T09:55:50 CLT" name="beforeMethodMethod" finished-at="2023-06-13T09:55:51 CLT" duration-ms="1437" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[public void test.java.carritocompras.CC_Test.CC_QA_Automatizacion(java.lang.String[]) throws java.lang.InterruptedException]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethodMethod -->
+        <test-method signature="CC_QA_Automatizacion([Ljava.lang.String;)[pri:0, instance:test.java.carritocompras.CC_Test@7193666c]" started-at="2023-06-13T09:55:51 CLT" name="CC_QA_Automatizacion" data-provider="Data" finished-at="2023-06-13T09:56:11 CLT" duration-ms="19519" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[Ljava.lang.String;@7d755813]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- CC_QA_Automatizacion -->
+        <test-method is-config="true" signature="afterMethodMethod(org.testng.ITestResult)[pri:0, instance:test.java.carritocompras.CC_Test@7193666c]" started-at="2023-06-13T09:56:11 CLT" name="afterMethodMethod" finished-at="2023-06-13T09:56:11 CLT" duration-ms="96" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=CC_QA_Automatizacion status=SUCCESS method=CC_Test.CC_QA_Automatizacion([Ljava.lang.String;)[pri:0, instance:test.java.carritocompras.CC_Test@7193666c] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethodMethod -->
+        <test-method is-config="true" signature="afterTestMethod()[pri:0, instance:test.java.carritocompras.CC_Test@7193666c]" started-at="2023-06-13T09:56:11 CLT" name="afterTestMethod" finished-at="2023-06-13T09:56:11 CLT" duration-ms="172" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterTestMethod -->
+      </class> <!-- test.java.carritocompras.CC_Test -->
+    </test> <!-- Test Automation -->
+  </suite> <!-- Sample Test Suite -->
+</testng-results>
