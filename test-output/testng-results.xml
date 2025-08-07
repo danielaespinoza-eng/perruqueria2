@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="3" passed="2" failed="1" skipped="0">
+<testng-results ignored="0" total="3" passed="0" failed="3" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-06-13T17:05:57 CLT" name="Sample Test Suite" finished-at="2023-06-13T17:07:47 CLT" duration-ms="109879">
+  <suite started-at="2023-07-05T15:40:06 CLT" name="Sample Test Suite" finished-at="2023-07-05T15:40:14 CLT" duration-ms="8008">
     <groups>
     </groups>
-    <test started-at="2023-06-13T17:05:57 CLT" name="Test Automation" finished-at="2023-06-13T17:07:47 CLT" duration-ms="109879">
+    <test started-at="2023-07-05T15:40:06 CLT" name="Test Automation" finished-at="2023-07-05T15:40:14 CLT" duration-ms="8008">
       <class name="test.java.carritocompras.CC_Test">
-        <test-method is-config="true" signature="beforeTestMethod()[pri:0, instance:test.java.carritocompras.CC_Test@7770f470]" started-at="2023-06-13T17:05:57 CLT" name="beforeTestMethod" finished-at="2023-06-13T17:05:57 CLT" duration-ms="116" status="PASS">
+        <test-method is-config="true" signature="beforeTestMethod()[pri:0, instance:test.java.carritocompras.CC_Test@7770f470]" started-at="2023-07-05T15:40:06 CLT" name="beforeTestMethod" finished-at="2023-07-05T15:40:06 CLT" duration-ms="134" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeTestMethod -->
-        <test-method is-config="true" signature="beforeMethodMethod(java.lang.String,java.lang.reflect.Method)[pri:0, instance:test.java.carritocompras.CC_Test@7770f470]" started-at="2023-06-13T17:05:57 CLT" name="beforeMethodMethod" finished-at="2023-06-13T17:06:00 CLT" duration-ms="2618" status="PASS">
+        <test-method is-config="true" signature="beforeMethodMethod(java.lang.String,java.lang.reflect.Method)[pri:0, instance:test.java.carritocompras.CC_Test@7770f470]" started-at="2023-07-05T15:40:06 CLT" name="beforeMethodMethod" finished-at="2023-07-05T15:40:07 CLT" duration-ms="1605" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -27,11 +27,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethodMethod -->
-        <test-method signature="CC_QA_Automatizacion([Ljava.lang.String;)[pri:0, instance:test.java.carritocompras.CC_Test@7770f470]" started-at="2023-06-13T17:06:00 CLT" name="CC_QA_Automatizacion" data-provider="Data" finished-at="2023-06-13T17:07:01 CLT" duration-ms="60768" status="FAIL">
+        <test-method signature="CC_QA_Automatizacion([Ljava.lang.String;)[pri:0, instance:test.java.carritocompras.CC_Test@7770f470]" started-at="2023-07-05T15:40:07 CLT" name="CC_QA_Automatizacion" data-provider="Data" finished-at="2023-07-05T15:40:09 CLT" duration-ms="1188" status="FAIL">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[Ljava.lang.String;@6441c486]]>
+                <![CDATA[[Ljava.lang.String;@5f80fa43]]>
               </value>
             </param>
           </params>
@@ -44,8 +44,8 @@
 at org.testng.Assert.fail(Assert.java:99)
 at org.testng.Assert.fail(Assert.java:106)
 at main.java.utils.GG_Utils.eventFailed(GG_Utils.java:46)
-at main.java.pageEvents.CC_PasosFuncionales.seleccionarProducto(CC_PasosFuncionales.java:116)
-at test.java.carritocompras.CC_Test.CC_QA_Automatizacion(CC_Test.java:30)
+at main.java.pageEvents.CC_PasosFuncionales.iniciarSesion(CC_PasosFuncionales.java:67)
+at test.java.carritocompras.CC_Test.CC_QA_Automatizacion(CC_Test.java:29)
 at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
 at java.base/java.lang.reflect.Method.invoke(Method.java:578)
 at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
@@ -78,7 +78,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- CC_QA_Automatizacion -->
-        <test-method is-config="true" signature="afterMethodMethod(org.testng.ITestResult)[pri:0, instance:test.java.carritocompras.CC_Test@7770f470]" started-at="2023-06-13T17:07:01 CLT" name="afterMethodMethod" finished-at="2023-06-13T17:07:01 CLT" duration-ms="160" status="PASS">
+        <test-method is-config="true" signature="afterMethodMethod(org.testng.ITestResult)[pri:0, instance:test.java.carritocompras.CC_Test@7770f470]" started-at="2023-07-05T15:40:09 CLT" name="afterMethodMethod" finished-at="2023-07-05T15:40:09 CLT" duration-ms="120" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -89,7 +89,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethodMethod -->
-        <test-method is-config="true" signature="beforeMethodMethod(java.lang.String,java.lang.reflect.Method)[pri:0, instance:test.java.carritocompras.CC_Test@7770f470]" started-at="2023-06-13T17:07:01 CLT" name="beforeMethodMethod" finished-at="2023-06-13T17:07:03 CLT" duration-ms="2067" status="PASS">
+        <test-method is-config="true" signature="beforeMethodMethod(java.lang.String,java.lang.reflect.Method)[pri:0, instance:test.java.carritocompras.CC_Test@7770f470]" started-at="2023-07-05T15:40:09 CLT" name="beforeMethodMethod" finished-at="2023-07-05T15:40:10 CLT" duration-ms="1125" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -105,29 +105,69 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethodMethod -->
-        <test-method signature="CC_QA_Automatizacion([Ljava.lang.String;)[pri:0, instance:test.java.carritocompras.CC_Test@7770f470]" started-at="2023-06-13T17:07:03 CLT" name="CC_QA_Automatizacion" data-provider="Data" finished-at="2023-06-13T17:07:25 CLT" duration-ms="21729" status="PASS">
+        <test-method signature="CC_QA_Automatizacion([Ljava.lang.String;)[pri:0, instance:test.java.carritocompras.CC_Test@7770f470]" started-at="2023-07-05T15:40:10 CLT" name="CC_QA_Automatizacion" data-provider="Data" finished-at="2023-07-05T15:40:11 CLT" duration-ms="1131" status="FAIL">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[Ljava.lang.String;@1dc2de84]]>
+                <![CDATA[[Ljava.lang.String;@676ff3b0]]>
               </value>
             </param>
           </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[null]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: null
+at org.testng.Assert.fail(Assert.java:99)
+at org.testng.Assert.fail(Assert.java:106)
+at main.java.utils.GG_Utils.eventFailed(GG_Utils.java:46)
+at main.java.pageEvents.CC_PasosFuncionales.iniciarSesion(CC_PasosFuncionales.java:67)
+at test.java.carritocompras.CC_Test.CC_QA_Automatizacion(CC_Test.java:29)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:794)
+at org.testng.TestRunner.run(TestRunner.java:596)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+at org.testng.TestNG.runSuites(TestNG.java:1063)
+at org.testng.TestNG.run(TestNG.java:1031)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- CC_QA_Automatizacion -->
-        <test-method is-config="true" signature="afterMethodMethod(org.testng.ITestResult)[pri:0, instance:test.java.carritocompras.CC_Test@7770f470]" started-at="2023-06-13T17:07:25 CLT" name="afterMethodMethod" finished-at="2023-06-13T17:07:25 CLT" duration-ms="157" status="PASS">
+        <test-method is-config="true" signature="afterMethodMethod(org.testng.ITestResult)[pri:0, instance:test.java.carritocompras.CC_Test@7770f470]" started-at="2023-07-05T15:40:11 CLT" name="afterMethodMethod" finished-at="2023-07-05T15:40:11 CLT" duration-ms="119" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=CC_QA_Automatizacion status=SUCCESS method=CC_Test.CC_QA_Automatizacion([Ljava.lang.String;)[pri:0, instance:test.java.carritocompras.CC_Test@7770f470] output={null}]]]>
+                <![CDATA[[TestResult name=CC_QA_Automatizacion status=FAILURE method=CC_Test.CC_QA_Automatizacion([Ljava.lang.String;)[pri:0, instance:test.java.carritocompras.CC_Test@7770f470] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethodMethod -->
-        <test-method is-config="true" signature="beforeMethodMethod(java.lang.String,java.lang.reflect.Method)[pri:0, instance:test.java.carritocompras.CC_Test@7770f470]" started-at="2023-06-13T17:07:25 CLT" name="beforeMethodMethod" finished-at="2023-06-13T17:07:27 CLT" duration-ms="2042" status="PASS">
+        <test-method is-config="true" signature="beforeMethodMethod(java.lang.String,java.lang.reflect.Method)[pri:0, instance:test.java.carritocompras.CC_Test@7770f470]" started-at="2023-07-05T15:40:11 CLT" name="beforeMethodMethod" finished-at="2023-07-05T15:40:12 CLT" duration-ms="1092" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -143,29 +183,69 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethodMethod -->
-        <test-method signature="CC_QA_Automatizacion([Ljava.lang.String;)[pri:0, instance:test.java.carritocompras.CC_Test@7770f470]" started-at="2023-06-13T17:07:27 CLT" name="CC_QA_Automatizacion" data-provider="Data" finished-at="2023-06-13T17:07:47 CLT" duration-ms="19550" status="PASS">
+        <test-method signature="CC_QA_Automatizacion([Ljava.lang.String;)[pri:0, instance:test.java.carritocompras.CC_Test@7770f470]" started-at="2023-07-05T15:40:12 CLT" name="CC_QA_Automatizacion" data-provider="Data" finished-at="2023-07-05T15:40:13 CLT" duration-ms="1125" status="FAIL">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[Ljava.lang.String;@31c2affc]]>
+                <![CDATA[[Ljava.lang.String;@16c8b7bd]]>
               </value>
             </param>
           </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[null]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: null
+at org.testng.Assert.fail(Assert.java:99)
+at org.testng.Assert.fail(Assert.java:106)
+at main.java.utils.GG_Utils.eventFailed(GG_Utils.java:46)
+at main.java.pageEvents.CC_PasosFuncionales.iniciarSesion(CC_PasosFuncionales.java:67)
+at test.java.carritocompras.CC_Test.CC_QA_Automatizacion(CC_Test.java:29)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:794)
+at org.testng.TestRunner.run(TestRunner.java:596)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+at org.testng.TestNG.runSuites(TestNG.java:1063)
+at org.testng.TestNG.run(TestNG.java:1031)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- CC_QA_Automatizacion -->
-        <test-method is-config="true" signature="afterMethodMethod(org.testng.ITestResult)[pri:0, instance:test.java.carritocompras.CC_Test@7770f470]" started-at="2023-06-13T17:07:47 CLT" name="afterMethodMethod" finished-at="2023-06-13T17:07:47 CLT" duration-ms="112" status="PASS">
+        <test-method is-config="true" signature="afterMethodMethod(org.testng.ITestResult)[pri:0, instance:test.java.carritocompras.CC_Test@7770f470]" started-at="2023-07-05T15:40:13 CLT" name="afterMethodMethod" finished-at="2023-07-05T15:40:13 CLT" duration-ms="126" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=CC_QA_Automatizacion status=SUCCESS method=CC_Test.CC_QA_Automatizacion([Ljava.lang.String;)[pri:0, instance:test.java.carritocompras.CC_Test@7770f470] output={null}]]]>
+                <![CDATA[[TestResult name=CC_QA_Automatizacion status=FAILURE method=CC_Test.CC_QA_Automatizacion([Ljava.lang.String;)[pri:0, instance:test.java.carritocompras.CC_Test@7770f470] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethodMethod -->
-        <test-method is-config="true" signature="afterTestMethod()[pri:0, instance:test.java.carritocompras.CC_Test@7770f470]" started-at="2023-06-13T17:07:47 CLT" name="afterTestMethod" finished-at="2023-06-13T17:07:47 CLT" duration-ms="196" status="PASS">
+        <test-method is-config="true" signature="afterTestMethod()[pri:0, instance:test.java.carritocompras.CC_Test@7770f470]" started-at="2023-07-05T15:40:13 CLT" name="afterTestMethod" finished-at="2023-07-05T15:40:14 CLT" duration-ms="205" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterTestMethod -->

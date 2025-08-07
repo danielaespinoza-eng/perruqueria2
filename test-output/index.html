@@ -26,7 +26,7 @@
       <span class="top-banner-title-font">Test results</span>
       <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">1 suite, 1 failed test</span>
+      <span class="top-banner-font-1">1 suite, 3 failed tests</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -93,7 +93,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">3 methods, 1 failed,   2 passed</span>
+                    <span class="method-stats">3 methods, 3 failed,   </span>
                   </li>
                   <li>
                     <span class="method-list-title failed">Failed methods</span>
@@ -104,29 +104,20 @@
                     <div class="method-list-content failed suite-Sample_Test_Suite">
                       <span>
                         <img src="failed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Sample_Test_Suite" title="test.java.carritocompras.CC_Test" class="method navigator-link" hash-for-method="CC_QA_Automatizacion([standard_user, secret_sauce, eeeeeSauce Labs Backpack, , 1])">CC_QA_Automatizacion([standard_user, secret_sauce, eeeeeSauce Labs Backpack, , 1])</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                    </div> <!-- method-list-content failed suite-Sample_Test_Suite -->
-                  </li>
-                  <li>
-                    <span class="method-list-title passed">Passed methods</span>
-                    <span class="show-or-hide-methods passed">
-                      <a href="#" panel-name="suite-Sample_Test_Suite" class="hide-methods passed suite-Sample_Test_Suite"> (hide)</a> <!-- hide-methods passed suite-Sample_Test_Suite -->
-                      <a href="#" panel-name="suite-Sample_Test_Suite" class="show-methods passed suite-Sample_Test_Suite"> (show)</a> <!-- show-methods passed suite-Sample_Test_Suite -->
-                    </span>
-                    <div class="method-list-content passed suite-Sample_Test_Suite">
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Sample_Test_Suite" title="test.java.carritocompras.CC_Test" class="method navigator-link" hash-for-method="CC_QA_Automatizacion([standard_user, secret_sauce, Sauce Labs Bolt T-Shirt, , 1])">CC_QA_Automatizacion([standard_user, secret_sauce, Sauce Labs Bolt T-Shirt, , 1])</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-Sample_Test_Suite" title="test.java.carritocompras.CC_Test" class="method navigator-link" hash-for-method="CC_QA_Automatizacion([standard_user, secret_sauce, Sauce Labs Bike Light, Sauce Labs Backpack, 2])">CC_QA_Automatizacion([standard_user, secret_sauce, Sauce Labs Bike Light, Sauce Labs Backpack, 2])</a> <!-- method navigator-link -->
                       </span>
                       <br/>
-                    </div> <!-- method-list-content passed suite-Sample_Test_Suite -->
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Sample_Test_Suite" title="test.java.carritocompras.CC_Test" class="method navigator-link" hash-for-method="CC_QA_Automatizacion([standard_user, secret_sauce, eeeeeSauce Labs Backpack, , 1])">CC_QA_Automatizacion([standard_user, secret_sauce, eeeeeSauce Labs Backpack, , 1])</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Sample_Test_Suite" title="test.java.carritocompras.CC_Test" class="method navigator-link" hash-for-method="CC_QA_Automatizacion([standard_user, secret_sauce, Sauce Labs Bolt T-Shirt, , 1])">CC_QA_Automatizacion([standard_user, secret_sauce, Sauce Labs Bolt T-Shirt, , 1])</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-Sample_Test_Suite -->
                   </li>
                 </ul>
               </div> <!-- suite-section-content -->
@@ -146,14 +137,44 @@
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
+                  <a name="CC_QA_Automatizacion([standard_user, secret_sauce, Sauce Labs Bike Light, Sauce Labs Backpack, 2])">
+                  </a> <!-- CC_QA_Automatizacion([standard_user, secret_sauce, Sauce Labs Bike Light, Sauce Labs Backpack, 2]) -->
+                  <span class="method-name">CC_QA_Automatizacion</span>
+                  <span class="parameters">([standard_user, secret_sauce, Sauce Labs Bike Light, Sauce Labs Backpack, 2])</span>
+                  <div class="stack-trace">java.lang.AssertionError: null
+	at main.java.utils.GG_Utils.eventFailed(GG_Utils.java:46)
+	at main.java.pageEvents.CC_PasosFuncionales.iniciarSesion(CC_PasosFuncionales.java:67)
+	at test.java.carritocompras.CC_Test.CC_QA_Automatizacion(CC_Test.java:29)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 27 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
                   <a name="CC_QA_Automatizacion([standard_user, secret_sauce, eeeeeSauce Labs Backpack, , 1])">
                   </a> <!-- CC_QA_Automatizacion([standard_user, secret_sauce, eeeeeSauce Labs Backpack, , 1]) -->
                   <span class="method-name">CC_QA_Automatizacion</span>
                   <span class="parameters">([standard_user, secret_sauce, eeeeeSauce Labs Backpack, , 1])</span>
                   <div class="stack-trace">java.lang.AssertionError: null
 	at main.java.utils.GG_Utils.eventFailed(GG_Utils.java:46)
-	at main.java.pageEvents.CC_PasosFuncionales.seleccionarProducto(CC_PasosFuncionales.java:116)
-	at test.java.carritocompras.CC_Test.CC_QA_Automatizacion(CC_Test.java:30)
+	at main.java.pageEvents.CC_PasosFuncionales.iniciarSesion(CC_PasosFuncionales.java:67)
+	at test.java.carritocompras.CC_Test.CC_QA_Automatizacion(CC_Test.java:29)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 27 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="CC_QA_Automatizacion([standard_user, secret_sauce, Sauce Labs Bolt T-Shirt, , 1])">
+                  </a> <!-- CC_QA_Automatizacion([standard_user, secret_sauce, Sauce Labs Bolt T-Shirt, , 1]) -->
+                  <span class="method-name">CC_QA_Automatizacion</span>
+                  <span class="parameters">([standard_user, secret_sauce, Sauce Labs Bolt T-Shirt, , 1])</span>
+                  <div class="stack-trace">java.lang.AssertionError: null
+	at main.java.utils.GG_Utils.eventFailed(GG_Utils.java:46)
+	at main.java.pageEvents.CC_PasosFuncionales.iniciarSesion(CC_PasosFuncionales.java:67)
+	at test.java.carritocompras.CC_Test.CC_QA_Automatizacion(CC_Test.java:29)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
 ... Removed 27 stack frames
 </div> <!-- stack-trace -->
@@ -161,30 +182,6 @@
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
           </div> <!-- suite-Sample_Test_Suite-class-failed -->
-          <div class="suite-Sample_Test_Suite-class-passed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
-              <span class="class-name">test.java.carritocompras.CC_Test</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="CC_QA_Automatizacion([standard_user, secret_sauce, Sauce Labs Bolt T-Shirt, , 1])">
-                  </a> <!-- CC_QA_Automatizacion([standard_user, secret_sauce, Sauce Labs Bolt T-Shirt, , 1]) -->
-                  <span class="method-name">CC_QA_Automatizacion</span>
-                  <span class="parameters">([standard_user, secret_sauce, Sauce Labs Bolt T-Shirt, , 1])</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="CC_QA_Automatizacion([standard_user, secret_sauce, Sauce Labs Bike Light, Sauce Labs Backpack, 2])">
-                  </a> <!-- CC_QA_Automatizacion([standard_user, secret_sauce, Sauce Labs Bike Light, Sauce Labs Backpack, 2]) -->
-                  <span class="method-name">CC_QA_Automatizacion</span>
-                  <span class="parameters">([standard_user, secret_sauce, Sauce Labs Bike Light, Sauce Labs Backpack, 2])</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Sample_Test_Suite-class-passed -->
         </div> <!-- panel Sample_Test_Suite -->
         <div panel-name="test-xml-Sample_Test_Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
@@ -245,20 +242,20 @@ data.addRows(3);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'CC_QA_Automatizacion')
 data.setCell(0, 2, 'test.java.carritocompras.CC_Test')
-data.setCell(0, 3, 60768);
+data.setCell(0, 3, 1188);
 data.setCell(1, 0, 1)
 data.setCell(1, 1, 'CC_QA_Automatizacion')
 data.setCell(1, 2, 'test.java.carritocompras.CC_Test')
-data.setCell(1, 3, 21729);
+data.setCell(1, 3, 1131);
 data.setCell(2, 0, 2)
 data.setCell(2, 1, 'CC_QA_Automatizacion')
 data.setCell(2, 2, 'test.java.carritocompras.CC_Test')
-data.setCell(2, 3, 19550);
+data.setCell(2, 3, 1125);
 window.suiteTableData['Sample_Test_Suite']= { tableData: data, tableDiv: 'times-div-Sample_Test_Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 1 minutes</span>
+              <span class="suite-total-time">Total running time: 3 seconds</span>
               <div id="times-div-Sample_Test_Suite">
               </div> <!-- times-div-Sample_Test_Suite -->
             </div> <!-- times-div -->
@@ -291,45 +288,49 @@ return data;
               </div> <!-- configuration-test before -->
               <div class="configuration-method before">
                 <span class="method-name">beforeMethodMethod(chrome, public void test.java.carritocompras.CC_Test.CC_QA_Automatizacion(java.lang.String[]) throws...)</span>
-                <span class="method-start">138 ms</span>
+                <span class="method-start">161 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
                 <span class="method-name">CC_QA_Automatizacion([standard_user, secret_sauce, eeeeeSauce Labs Backpack, , 1])</span>
-                <span class="method-start">2759 ms</span>
+                <span class="method-start">1767 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">afterMethodMethod([TestResult name=CC_QA_Automatizacion status=FAILURE method=CC_Test.CC_QA_Automatizacion([Ljava.lang...)</span>
-                <span class="method-start">63527 ms</span>
+                <span class="method-start">2957 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">beforeMethodMethod(chrome, public void test.java.carritocompras.CC_Test.CC_QA_Automatizacion(java.lang.String[]) throws...)</span>
-                <span class="method-start">63688 ms</span>
+                <span class="method-start">3077 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
+                <img src="failed.png">
+                </img>
                 <span class="method-name">CC_QA_Automatizacion([standard_user, secret_sauce, Sauce Labs Bike Light, Sauce Labs Backpack, 2])</span>
-                <span class="method-start">65755 ms</span>
+                <span class="method-start">4202 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
-                <span class="method-name">afterMethodMethod([TestResult name=CC_QA_Automatizacion status=SUCCESS method=CC_Test.CC_QA_Automatizacion([Ljava.lang...)</span>
-                <span class="method-start">87676 ms</span>
+                <span class="method-name">afterMethodMethod([TestResult name=CC_QA_Automatizacion status=FAILURE method=CC_Test.CC_QA_Automatizacion([Ljava.lang...)</span>
+                <span class="method-start">5335 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">beforeMethodMethod(chrome, public void test.java.carritocompras.CC_Test.CC_QA_Automatizacion(java.lang.String[]) throws...)</span>
-                <span class="method-start">87833 ms</span>
+                <span class="method-start">5455 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
+                <img src="failed.png">
+                </img>
                 <span class="method-name">CC_QA_Automatizacion([standard_user, secret_sauce, Sauce Labs Bolt T-Shirt, , 1])</span>
-                <span class="method-start">89875 ms</span>
+                <span class="method-start">6547 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
-                <span class="method-name">afterMethodMethod([TestResult name=CC_QA_Automatizacion status=SUCCESS method=CC_Test.CC_QA_Automatizacion([Ljava.lang...)</span>
-                <span class="method-start">109559 ms</span>
+                <span class="method-name">afterMethodMethod([TestResult name=CC_QA_Automatizacion status=FAILURE method=CC_Test.CC_QA_Automatizacion([Ljava.lang...)</span>
+                <span class="method-start">7673 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-test after">
                 <span class="method-name">afterTestMethod</span>
-                <span class="method-start">109680 ms</span>
+                <span class="method-start">7800 ms</span>
               </div> <!-- configuration-test after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

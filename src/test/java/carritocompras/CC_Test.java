@@ -1,102 +1,158 @@
 package test.java.carritocompras;
 
 import org.testng.annotations.Test;
-import java.io.BufferedReader;
-import java.io.File;
-import java.io.FileReader;
-import java.io.IOException;
-
 import org.testng.annotations.DataProvider;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
+
+import java.util.Arrays;
+import java.io.IOException;
+import java.util.List;
+import java.util.ArrayList;
+
+import com.opencsv.CSVReader;
 import com.opencsv.exceptions.CsvValidationException;
+import com.opencsv.exceptions.CsvException;
 
 import main.java.pageEvents.CC_PasosFuncionales;
-import main.java.utils.GG_OpenCSV;
-import main.java.utils.GG_Utils;
-import test.java.GG_BaseTest;
 import main.java.utils.CC_Parametros;
 
-//Clase que contiene los Pasos Funcionales automatizados
-public class CC_Test extends GG_BaseTest {
-	static int gloFilas = 0;
-	public static String gloVerFlujo = "S";
+public class CC_Test {
+    static int gloFilas = 0;
+    public static String gloVerFlujo = "S";
+    private WebDriver driver;
 
-	@Test(enabled = true, dataProvider = "Data")
-	public void CC_QA_Automatizacion(String args[]) throws InterruptedException {
+    @Test(dataProvider = "DataProductosMultiples")
+    public void CC_QA_AgregarProductosAlCarrito(
+        String producto1,
+        String producto2,
+        String producto3,
+        String cantidadEsperada,
+        String nombreCliente,
+        String fechaServicio,
+        String profesional,
+        String nombreMascota,
+        String edadMascota,
+        String unidadEdad,
+        String razaMascota
+    ) {
+    	System.setProperty("webdriver.chrome.driver",
+    	        "C:/Estructura_Base/CC_Logs_Perruqueria/drivers/chromedriver.exe");
+    	ChromeOptions options = new ChromeOptions();
+    	options.addArguments("--headless=new" , "--disable-gpu" , "--ignore-certificate-errors" , "--window-size=1920,1080", "--disable-extensions" , "--no-sandbox" ,"--disable-dev-shm-usage"  ); // Usa "new" para modo más moderno
+    	
 
-		GG_Utils.infoTestCase("Carrito de compras",
-				"Validar la generacion de una compra al agregar un producto al carrito de compras");
+    	// Crear el driver con las opciones configuradas
+    	driver = new ChromeDriver(options);
+    	driver.manage().window().maximize();
+    	driver.get(CC_Parametros.url);
 
-		CC_PasosFuncionales.iniciarSesion(args[0], args[1], "1");
-		CC_PasosFuncionales.seleccionarProducto(args[2], args[3], args[4], "2");
-	}
-	
-	@DataProvider(name = "Data")
-	public Object[][] dataBrokerAPAlternative() throws CsvValidationException, InterruptedException, IOException {
+        try {
+            CC_PasosFuncionales pasos = new CC_PasosFuncionales(driver);
 
-		int xColumnas = CC_Parametros.gloColumnas;
-		
-		OpenTxt();
-		System.out.println("*** Archivo leido: " + CC_Parametros.gloDir + "\\data\\TotalCasosDePruebas.txt");
-		System.out.println("*** Total Casos de Prueba a ejecutar: " + gloFilas + ".");
-		
-		if (gloVerFlujo.equals("S")) {
-			System.out.println("*** La ejecución del Flujo será visible por pantalla.");
-		} else {
-			System.out.println("*** La ejecución del Flujo NO será visible por pantalla, se ejecutará en Background.");
-		}
-		
-		Object[][] data = GG_OpenCSV.getCSVParameters(CC_Parametros.gloNombreCSV, gloFilas, xColumnas);
-		return data;
-	}
-	
-public static void OpenTxt() {
-		
-		File archivo = null;
-		FileReader fr = null;
-		BufferedReader br = null;
-		
-		gloFilas = 0;
-		File archivo2 = new File(CC_Parametros.gloDir + "\\data\\TotalCasosDePruebas.txt");
+            // Agregar productos si existen
+            //if (producto1 != null && !producto1.isEmpty()) pasos.agregarProductoAlCarro(producto1);
+            //if (producto2 != null && !producto2.isEmpty()) pasos.agregarProductoAlCarro(producto2);
+            //if (producto3 != null && !producto3.isEmpty()) pasos.agregarProductoAlCarro(producto3);
+            List<String> productos = Arrays.asList(producto1, producto2, producto3);
+            pasos.agregarProductosConBusquedaMixta(productos);
 
-        if (archivo2.exists()) {
+            pasos.validarProductoAgregado(cantidadEsperada);
+            pasos.irABolsaDeCompras();
 
-			try {
-				// Apertura del fichero y creacion de BufferedReader para poder
-	
-				archivo = new File(CC_Parametros.gloDir + "\\data\\TotalCasosDePruebas.txt");
-				fr = new FileReader(archivo);
-				br = new BufferedReader(fr);
-	
-				// Lectura del fichero
-				String linea;
-				
-				// Linea 1: Leer comentario
-				linea = br.readLine();
-				
-				// Linea 2: Leer Cantidad de Casos de Pruebas a ejecutar
-				linea = br.readLine();
-				gloFilas = Integer.valueOf(linea);
-				
-				// Linea 3: Leer indicador S/N, S=Ver Flujo por pantalla, N=No Ver Flujo, ejecutar en background
-				linea = br.readLine();
-				gloVerFlujo = linea;
-				
-			} catch (Exception e) {
-				e.printStackTrace();
-			} finally {
-				// En el finally cerramos el fichero, para asegurarnos
-				// que se cierra tanto si todo va bien como si salta
-				// una excepcion.
-				try {
-					if (null != fr) {
-						fr.close();
-					}
-				} catch (Exception e2) {
-					e2.printStackTrace();
-				}
-			}
-        }else {
-        	System.out.println("Archivo no existe: " + CC_Parametros.gloDir + "\\data\\TotalCasosDePruebas.txt");
-    	}
-	}
+            pasos.aumentarCantidadProductoPorNombre("Baño y Corte", 2);
+            pasos.aumentarCantidadProductoPorNombre("Baño y Peinado", 2);
+
+            pasos.disminuirCantidadProductoPorNombre("Baño y Peinado", 2);
+            pasos.disminuirCantidadProductoPorNombre("Baño y Corte", 1);
+
+            pasos.eliminarProductoPorNombre("Corte de Uñas");
+
+            pasos.irAFinalizacionReserva();
+
+            pasos.completarFormularioReserva(
+                nombreCliente,
+                fechaServicio,
+                profesional,
+                nombreMascota,
+                edadMascota,
+                unidadEdad,
+                razaMascota
+            );
+            
+            pasos.finalizarReserva();
+
+        } finally {
+            // driver.quit(); // Descomentar si quieres cerrar el navegador al final
+        }
+    }
+
+    @DataProvider(name = "DataProductosMultiples")
+    public Object[][] dataProviderMultiples() throws IOException, CsvValidationException, CsvException {
+        String rutaCSV = CC_Parametros.gloDir + "data/" + CC_Parametros.gloNombreCSV;
+        Object[][] datosFiltrados = filtrarCSVPorCantidadDeProductos(rutaCSV, 2);
+
+        if (datosFiltrados.length > 0) {
+            return new Object[][] { datosFiltrados[0] };
+        } else {
+            throw new IllegalArgumentException("⚠️ No se encontraron filas válidas en el CSV.");
+        }
+    }
+
+    @DataProvider(name = "DataProductoUnico")
+    public Object[][] dataProviderUnico() throws IOException, CsvValidationException, CsvException {
+        String rutaCSV = CC_Parametros.gloDir + "data/" + CC_Parametros.gloNombreCSV;
+        return filtrarCSVPorCantidadDeProductos(rutaCSV, 1);
+    }
+
+    private Object[][] filtrarCSVPorCantidadDeProductos(String path, int cantidadProductosRequerida) throws IOException, CsvValidationException, CsvException {
+        try (CSVReader reader = new CSVReader(new java.io.InputStreamReader(new java.io.FileInputStream(path), java.nio.charset.StandardCharsets.UTF_8))) {
+
+            List<String[]> rows = reader.readAll();
+            if (rows.isEmpty()) {
+                throw new IllegalArgumentException("⚠️ El archivo CSV está vacío: " + path);
+            }
+
+            rows.remove(0); // Eliminar encabezado
+            List<Object[]> datosFiltrados = new ArrayList<>();
+
+            for (String[] fila : rows) {
+                if (fila.length < 11) {
+                    System.out.println("⚠️ Fila con columnas insuficientes: " + String.join(",", fila));
+                    continue;
+                }
+
+                int productosNoVacios = 0;
+                for (int i = 0; i <= 2; i++) {
+                    if (fila[i] != null && !fila[i].trim().isEmpty()) {
+                        productosNoVacios++;
+                    }
+                }
+
+                if (cantidadProductosRequerida == 1 && productosNoVacios == 1) {
+                    datosFiltrados.add(new Object[]{
+                        fila[0].trim(), // producto1
+                        "", "",         // producto2 y 3 vacíos
+                        fila[3].trim(), // cantidadEsperada
+                        fila[4].trim(), fila[5].trim(), fila[6].trim(),
+                        fila[7].trim(), fila[8].trim(), fila[9].trim(), fila[10].trim()
+                    });
+                }
+
+                if (cantidadProductosRequerida >= 2 && productosNoVacios >= 2) {
+                    datosFiltrados.add(new Object[]{
+                        fila[0].trim(),
+                        fila[1].trim(),
+                        fila[2].trim(),
+                        fila[3].trim(),
+                        fila[4].trim(), fila[5].trim(), fila[6].trim(),
+                        fila[7].trim(), fila[8].trim(), fila[9].trim(), fila[10].trim()
+                    });
+                }
+            }
+
+            return datosFiltrados.toArray(new Object[0][]);
+        }
+    }
 }

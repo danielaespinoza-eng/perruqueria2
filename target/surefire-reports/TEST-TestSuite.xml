@@ -1,67 +1,66 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="TestSuite" time="66.522" tests="3" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="TestSuite" time="52.36" tests="1" errors="0" skipped="0" failures="0">
   <properties>
     <property name="jansi.mode" value="force"/>
-    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
-    <property name="java.vm.version" value="20.0.1+9-29"/>
-    <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk-20\bin"/>
-    <property name="maven.multiModuleProjectDirectory" value="C:\Users\Test Group\eclipse-workspace-Pruebas\Estructura-Base-New_2p"/>
-    <property name="java.vm.vendor" value="Oracle Corporation"/>
-    <property name="java.vendor.url" value="https://java.oracle.com/"/>
+    <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
+    <property name="java.vm.version" value="21.0.7+6-LTS"/>
+    <property name="sun.boot.library.path" value="C:\Users\TG\.p2\pool\plugins\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_21.0.7.v20250502-0916\jre\bin"/>
+    <property name="maven.multiModuleProjectDirectory" value="C:\Users\TG\eclipse-workspace\Estructura-Base-New_Perruqueria"/>
+    <property name="java.vm.vendor" value="Eclipse Adoptium"/>
+    <property name="java.vendor.url" value="https://adoptium.net/"/>
     <property name="guice.disable.misplaced.annotation.check" value="true"/>
     <property name="path.separator" value=";"/>
-    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
+    <property name="java.vm.name" value="OpenJDK 64-Bit Server VM"/>
     <property name="sun.os.patch.level" value=""/>
     <property name="user.script" value=""/>
     <property name="user.country" value="CL"/>
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
-    <property name="user.dir" value="C:\Users\Test Group\eclipse-workspace-Pruebas\Estructura-Base-New_2p"/>
-    <property name="java.vm.compressedOopsMode" value="32-bit"/>
-    <property name="java.runtime.version" value="20.0.1+9-29"/>
+    <property name="user.dir" value="C:\Users\TG\eclipse-workspace\Estructura-Base-New_Perruqueria"/>
+    <property name="java.vm.compressedOopsMode" value="Zero based"/>
+    <property name="java.runtime.version" value="21.0.7+6-LTS"/>
     <property name="os.arch" value="amd64"/>
-    <property name="java.io.tmpdir" value="C:\Users\TESTGR~1\AppData\Local\Temp\"/>
+    <property name="java.io.tmpdir" value="C:\Users\TG\AppData\Local\Temp\"/>
     <property name="line.separator" value="&#10;"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="user.variant" value=""/>
-    <property name="stderr.encoding" value="Cp1252"/>
+    <property name="stderr.encoding" value="UTF-8"/>
     <property name="os.name" value="Windows 11"/>
-    <property name="classworlds.conf" value="C:\Users\Test Group\eclipse-workspace-Pruebas\.metadata\.plugins\org.eclipse.m2e.launching\launches\m2conf5554988342162394766.tmp"/>
+    <property name="classworlds.conf" value="C:\Users\TG\eclipse-workspace\.metadata\.plugins\org.eclipse.m2e.launching\launches\m2conf5976957923809993148.tmp"/>
     <property name="sun.jnu.encoding" value="Cp1252"/>
-    <property name="stdout.encoding" value="Cp1252"/>
-    <property name="java.library.path" value="C:\Program Files\Java\jdk-20\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:/Program Files/Java/jdk-20/bin/server;C:/Program Files/Java/jdk-20/bin;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\windows\system32;C:\windows;C:\windows\System32\Wbem;C:\windows\System32\WindowsPowerShell\v1.0\;C:\windows\System32\OpenSSH\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Microsoft SQL Server\150\Tools\Binn\;C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\170\Tools\Binn\;C:\Program Files\dotnet\;C:\Program Files\VisualSVN Server\bin;C:\Program Files\TortoiseSVN\bin;C:\Program Files\Git\cmd;C:\Users\Test Group\AppData\Local\Microsoft\WindowsApps;C:\zAppServer\Apache24\bin;C:\zAppServer\php7;C:\zAppServer\MySQL\bin;C:\Users\Test Group\.dotnet\tools;C:\WINDOWS\System32;;."/>
+    <property name="stdout.encoding" value="UTF-8"/>
+    <property name="java.library.path" value="C:\Users\TG\.p2\pool\plugins\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_21.0.7.v20250502-0916\jre\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:/Users/TG/.p2/pool/plugins/org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_21.0.7.v20250502-0916/jre/bin/server;C:/Users/TG/.p2/pool/plugins/org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_21.0.7.v20250502-0916/jre/bin;C:\Python313\Scripts\;C:\Python313\;C:\Program Files\Common Files\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\maven\apache-maven-3.9.9\bin;C:\Program Files\dotnet\;C:\Program Files (x86)\Windows Kits\10\Windows Performance Toolkit\;C:\Program Files\Java\jdk-11\bin;C:\Program Files\Java\jdk-21\bin;C:\Users\TestGroup.DESKTOP-97H2JQF\AppData\Local\Android\Sdk\platform-tools;C:\Users\TestGroup.DESKTOP-97H2JQF\AppData\Local\Android\Sdk\platform-tools;C:\Users\TestGroup.DESKTOP-97H2JQF\AppData\Local\Android\Sdk\cmdline-tools\latest;C:\Users\TestGroup.DESKTOP-97H2JQF\AppData\Local\Android\Sdk\cmdline-tools\latest\bin;C:\ProgramData\chocolatey\bin;C:\Users\TestGroup.DESKTOP-97H2JQF\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\MSYS2;C:\Program Files\Java\jdk-11\bin;C:\Program Files\Git\cmd;C:\Users\TG\AppData\Local\Microsoft\WindowsApps;C:\Users\TG\AppData\Local\Programs\Microsoft VS Code\bin;C:\WINDOWS\system32;;."/>
     <property name="jdk.debug" value="release"/>
-    <property name="java.class.version" value="64.0"/>
+    <property name="java.class.version" value="65.0"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="os.version" value="10.0"/>
-    <property name="user.home" value="C:\Users\Test Group"/>
+    <property name="user.home" value="C:\Users\TG"/>
     <property name="user.timezone" value="America/Santiago"/>
     <property name="file.encoding" value="UTF-8"/>
-    <property name="java.specification.version" value="20"/>
-    <property name="user.name" value="Test Group"/>
-    <property name="java.class.path" value="C:\Users\Test Group\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.8.701.20230209-1606\jars\plexus-classworlds-2.6.0.jar"/>
-    <property name="java.vm.specification.version" value="20"/>
+    <property name="java.specification.version" value="21"/>
+    <property name="user.name" value="TG"/>
+    <property name="java.class.path" value="C:\Users\TG\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20250220-2013\jars\plexus-classworlds-2.8.0.jar"/>
+    <property name="java.vm.specification.version" value="21"/>
     <property name="sun.arch.data.model" value="64"/>
     <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher -B -Dstyle.color=always test"/>
-    <property name="java.home" value="C:\Program Files\Java\jdk-20"/>
+    <property name="java.home" value="C:\Users\TG\.p2\pool\plugins\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_21.0.7.v20250502-0916\jre"/>
     <property name="user.language" value="es"/>
     <property name="java.specification.vendor" value="Oracle Corporation"/>
     <property name="java.vm.info" value="mixed mode, sharing"/>
-    <property name="java.version" value="20.0.1"/>
+    <property name="java.version" value="21.0.7"/>
     <property name="native.encoding" value="Cp1252"/>
-    <property name="java.vendor" value="Oracle Corporation"/>
-    <property name="maven.home" value="C:\Users\Test Group\eclipse-workspace-Pruebas\Estructura-Base-New_2p\EMBEDDED"/>
+    <property name="java.vendor" value="Eclipse Adoptium"/>
+    <property name="maven.home" value="C:\Users\TG\eclipse-workspace\Estructura-Base-New_Perruqueria\EMBEDDED"/>
     <property name="style.color" value="always"/>
     <property name="file.separator" value="\"/>
-    <property name="java.version.date" value="2023-04-18"/>
-    <property name="java.vendor.url.bug" value="https://bugreport.java.com/bugreport/"/>
+    <property name="java.version.date" value="2025-04-15"/>
+    <property name="java.vendor.url.bug" value="https://github.com/adoptium/adoptium-support/issues"/>
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="sun.cpu.endian" value="little"/>
-    <property name="m2e.build.project.data.socket.port" value="49445"/>
+    <property name="java.vendor.version" value="Temurin-21.0.7+6"/>
+    <property name="m2e.build.project.data.socket.port" value="58605"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase name="CC_QA_Automatizacion" classname="test.java.carritocompras.CC_Test" time="19.712"/>
-  <testcase name="CC_QA_Automatizacion" classname="test.java.carritocompras.CC_Test" time="21.713"/>
-  <testcase name="CC_QA_Automatizacion" classname="test.java.carritocompras.CC_Test" time="19.519"/>
+  <testcase name="CC_QA_AgregarProductosAlCarrito" classname="test.java.carritocompras.CC_Test" time="48.807"/>
 </testsuite>

@@ -47,7 +47,7 @@ public class GG_Utils {
 	}
 	
 	public static String takeScreenshot(String nameMethod) {
-    	//Obtener Fecha y Hora para la Evidencia del Pasó Fallido.
+    	//Obtener Fecha y Hora para la Evidencia del Pasï¿½ Fallido.
 	    LocalTime hhora = LocalTime.now();
 	    DateTimeFormatter f_t = DateTimeFormatter.ofPattern("HHmmss");
 	    
@@ -95,40 +95,59 @@ public class GG_Utils {
 	}
 
 	public static String inputName(WebElement element) {
-		String nameCamelCase = element.getAttribute("id").replace("input", "").replace("IR", "").replace("Lbl", "")
-				.replace("bto", "").replace("Login", "").replace("SS03_lgn", "").replace("Log", "").replace("In_", "")
-				.replace("Interno_", "").replace("SSO3_lgn", "").trim();
-		if (nameCamelCase.equals("")) {
-			nameCamelCase = element.getAttribute("formcontrolname").replace("input", "").replace("IR", "")
-					.replace("Lbl", "").replace("bto", "").trim();
-		}
-		String[] nameSplit = nameCamelCase.split("(?<!(^|[A-Z]))(?=[A-Z])|(?<!^)(?=[A-Z][a-z])");
 		String name = "";
-		for (int i = 0; i < nameSplit.length; i++) {
-			name = name + nameSplit[i] + " ";
-		}
-		return name.trim();
+		
+		try {
+			String nameCamelCase = element.getAttribute("id").replace("input", "").replace("IR", "").replace("Lbl", "")
+					.replace("bto", "").replace("Login", "").replace("SS03_lgn", "").replace("Log", "").replace("In_", "")
+					.replace("Interno_", "").replace("SSO3_lgn", "").trim();
+			if (nameCamelCase.equals("")) {
+				nameCamelCase = element.getAttribute("formcontrolname").replace("input", "").replace("IR", "")
+						.replace("Lbl", "").replace("bto", "").trim();
+			}
+			String[] nameSplit = nameCamelCase.split("(?<!(^|[A-Z]))(?=[A-Z])|(?<!^)(?=[A-Z][a-z])");
+			name = "";
+			for (int i = 0; i < nameSplit.length; i++) {
+				name = name + nameSplit[i] + " ";
+			}
+			
+			return name.trim();
+		} catch (Exception e) {
+			name = "*Sin-nombre*";
+			System.out.println("Elemento (text-box) sin Nombre asociado. Error: " + e.getMessage());
+			
+			return name;
+		}		
 	}
 
 	public static String buttonName(WebElement element) {
-		String nameCamelCase = element.getText();
-		if (nameCamelCase.equalsIgnoreCase("")) {
-			nameCamelCase = element.getAttribute("text");
-		}
-		if (nameCamelCase == null || nameCamelCase.equalsIgnoreCase("null")) {
-			nameCamelCase = element.getAttribute("data-original-title");
-		}
-		if (nameCamelCase == null || nameCamelCase.equalsIgnoreCase("null")) {
-			nameCamelCase = element.getAttribute("defaultValue");
-		}
-		if (nameCamelCase.equalsIgnoreCase("") || nameCamelCase == null || nameCamelCase.equalsIgnoreCase("null")) {
-			nameCamelCase = element.getAttribute("class").split("-")[2];
-		}
-		String[] nameSplit = nameCamelCase.split("(?<!(^|[A-Z]))(?=[A-Z])|(?<!^)(?=[A-Z][a-z])");
 		String name = "";
-		for (int i = 0; i < nameSplit.length; i++) {
-			name = name + nameSplit[i] + " ";
+		
+		try {
+			String nameCamelCase = element.getText();
+			if (nameCamelCase.equalsIgnoreCase("")) {
+				nameCamelCase = element.getAttribute("text");
+			}
+			if (nameCamelCase == null || nameCamelCase.equalsIgnoreCase("null")) {
+				nameCamelCase = element.getAttribute("data-original-title");
+			}
+			if (nameCamelCase == null || nameCamelCase.equalsIgnoreCase("null")) {
+				nameCamelCase = element.getAttribute("defaultValue");
+			}
+			if (nameCamelCase.equalsIgnoreCase("") || nameCamelCase == null || nameCamelCase.equalsIgnoreCase("null")) {
+				nameCamelCase = element.getAttribute("class").split("-")[2];
+			}
+			String[] nameSplit = nameCamelCase.split("(?<!(^|[A-Z]))(?=[A-Z])|(?<!^)(?=[A-Z][a-z])");
+			name = "";
+			for (int i = 0; i < nameSplit.length; i++) {
+				name = name + nameSplit[i] + " ";
+			}
+			return name.trim();
+		} catch (Exception e) {
+			name = "*Sin-nombre*";
+			System.out.println("Elemento(BotÃ³n) sin Nombre asociado. Error: " + e.getMessage());
+        
+			return name;
 		}
-		return name.trim();
 	}
 }

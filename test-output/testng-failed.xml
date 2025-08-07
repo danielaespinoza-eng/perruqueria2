@@ -12,7 +12,7 @@
           <include name="beforeTestMethod"/>
           <include name="afterTestMethod"/>
           <include name="afterMethodMethod"/>
-          <include name="CC_QA_Automatizacion" invocation-numbers="0"/>
+          <include name="CC_QA_Automatizacion" invocation-numbers="0 1 2"/>
           <include name="beforeMethodMethod"/>
         </methods>
       </class> <!-- test.java.carritocompras.CC_Test -->
