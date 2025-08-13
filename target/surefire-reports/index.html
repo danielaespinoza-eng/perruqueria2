@@ -145,6 +145,9 @@
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;!DOCTYPE suite SYSTEM &quot;https://testng.org/testng-1.0.dtd&quot;&gt;
 &lt;suite name=&quot;SuiteMascopet&quot; guice-stage=&quot;DEVELOPMENT&quot; verbose=&quot;0&quot;&gt;
+  &lt;listeners&gt;
+    &lt;listener class-name=&quot;main.java.utils.GG_SuiteListener&quot;/&gt;
+  &lt;/listeners&gt;
   &lt;test thread-count=&quot;5&quot; name=&quot;TestMascopet&quot; verbose=&quot;0&quot;&gt;
     &lt;classes&gt;
       &lt;class name=&quot;test.java.carritocompras.CC_Test&quot;/&gt;
@@ -191,12 +194,12 @@ data.addRows(1);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'CC_QA_AgregarProductosAlCarrito')
 data.setCell(0, 2, 'test.java.carritocompras.CC_Test')
-data.setCell(0, 3, 48797);
+data.setCell(0, 3, 49396);
 window.suiteTableData['SuiteMascopet']= { tableData: data, tableDiv: 'times-div-SuiteMascopet'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 48 seconds</span>
+              <span class="suite-total-time">Total running time: 49 seconds</span>
               <div id="times-div-SuiteMascopet">
               </div> <!-- times-div-SuiteMascopet -->
             </div> <!-- times-div -->
@@ -223,10 +226,26 @@ return data;
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
               <div class="chronological-class-name">test.java.carritocompras.CC_Test</div> <!-- chronological-class-name -->
+              <div class="configuration-test before">
+                <span class="method-name">beforeTestMethod</span>
+                <span class="method-start">0 ms</span>
+              </div> <!-- configuration-test before -->
+              <div class="configuration-method before">
+                <span class="method-name">beforeMethodMethod(chrome, public void test.java.carritocompras.CC_Test.CC_QA_AgregarProductosAlCarrito(java.lang.Strin...)</span>
+                <span class="method-start">1187 ms</span>
+              </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">CC_QA_AgregarProductosAlCarrito(Baño y Peinado, Baño y Corte, Corte de Uñas, 3, Daniela, 2025-02-10, Profesional 2, Rocky, 4, Años, ...)</span>
-                <span class="method-start">0 ms</span>
+                <span class="method-start">10493 ms</span>
               </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">afterMethodMethod([TestResult name=CC_QA_AgregarProductosAlCarrito status=SUCCESS method=CC_Test.CC_QA_AgregarProducto...)</span>
+                <span class="method-start">61359 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-test after">
+                <span class="method-name">afterTestMethod</span>
+                <span class="method-start">61464 ms</span>
+              </div> <!-- configuration-test after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
       </div> <!-- main-panel-root -->
