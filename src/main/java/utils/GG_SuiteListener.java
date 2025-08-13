@@ -28,56 +28,67 @@ public class GG_SuiteListener implements ITestListener, IAnnotationTransformer {
 
     private void guardarScreenshot(ITestResult result, String carpeta) {
         try {
+            // Evita error si driver es null
             if (GG_BaseTest.driver == null) {
                 System.out.println("[Listener] No se pudo tomar screenshot: driver es null.");
                 return;
             }
 
-            // Manejo de alertas antes del pantallazo
+            // Manejar alertas abiertas antes de capturar pantalla
             try {
-                Alert alert = GG_BaseTest.driver.switchTo().alert();
+                WebDriver driver = GG_BaseTest.driver;
+                Alert alert = driver.switchTo().alert();
                 System.out.println("[Listener] Alert detectado antes de screenshot: " + alert.getText());
-                alert.accept();
-                Thread.sleep(500);
+                alert.accept();  // o alert.dismiss() si prefieres
+                Thread.sleep(500); // esperar que desaparezca el alert
             } catch (NoAlertPresentException ex) {
-                // No hay alerta, continuar
+                // No hay alerta, continuar normalmente
+            } catch (InterruptedException e) {
+                System.out.println("[Listener] Error en sleep: " + e.getMessage());
             }
 
-            // Fecha y hora
-            String xFecha = LocalDate.now().format(DateTimeFormatter.ofPattern("yyyyMMdd"));
-            String xHora = LocalTime.now().format(DateTimeFormatter.ofPattern("HHmmss"));
+            // Obtener Fecha y Hora
+            LocalTime hhora = LocalTime.now();
+            DateTimeFormatter f_t = DateTimeFormatter.ofPattern("HHmmss");
+
+            LocalDate ffecha = LocalDate.now();
+            DateTimeFormatter f_d = DateTimeFormatter.ofPattern("yyyyMMdd");
+
+            String xHora = hhora.format(f_t);
+            String xFecha = ffecha.format(f_d);
+
             String xSufijo = xFecha + "_" + xHora;
 
-            // Carpeta en target/screenshots/carpeta
-            String targetPath = System.getProperty("user.dir") 
-                    + File.separator + "target" 
-                    + File.separator + "screenshots" 
-                    + File.separator + carpeta;
-
-            File dir = new File(targetPath);
-            if (!dir.exists()) dir.mkdirs();
-
-            // Nombre del archivo
-            String fileName = result.getMethod().getMethodName() + "_" + xSufijo + ".png";
+            // Ruta archivo
+            String fileName = CC_Parametros.gloDir + File.separator + "screenshots"
+                    + File.separator + carpeta + File.separator
+                    + result.getMethod().getMethodName() + "_" + xSufijo;
 
             // Tomar screenshot
-            File srcFile = ((TakesScreenshot) GG_BaseTest.driver).getScreenshotAs(OutputType.FILE);
-            File destFile = new File(dir, fileName);
-            FileUtils.copyFile(srcFile, destFile);
+            File f = ((TakesScreenshot) GG_BaseTest.driver).getScreenshotAs(OutputType.FILE);
+            FileUtils.copyFile(f, new File(fileName + ".png"));
 
-            // Ruta relativa para Jenkins (apunta a artifact/target/screenshots/...)
-            String relativePath = "screenshots/" + carpeta + "/" + fileName;
+            // Guardar nombre en archivo temporal
+            String fileName2 = CC_Parametros.gloDir + File.separator + "screenshots"
+                    + File.separator + carpeta + File.separator + "Archivo_Paso.txt";
 
-            // Agregar enlace y miniatura al reporte TestNG
-            org.testng.Reporter.log(
-                "<a href='" + relativePath + "' target='_blank'>Ver Screenshot</a><br>" +
-                "<img src='" + relativePath + "' height='200'><br>"
-            );
+            File xArchivo = new File(fileName2);
+            if (xArchivo.exists()) {
+                xArchivo.delete();
+            }
+            xArchivo.createNewFile();
 
-            System.out.println("[Listener] Screenshot guardado en: " + destFile.getAbsolutePath());
+            try (BufferedWriter archivoIndice = new BufferedWriter(
+                    new OutputStreamWriter(new FileOutputStream(xArchivo, true), "Windows-1252"))) {
+                archivoIndice.write(fileName + ".png");
+            }
 
-        } catch (Exception e) {
+            System.out.println("[Listener] Screenshot guardado en: " + fileName + ".png");
+
+        } catch (IOException e) {
             System.out.println("[Listener] Error guardando screenshot: " + e.getMessage());
+        } catch (Exception ex) {
+            System.out.println("[Listener] Error inesperado tomando screenshot: " + ex.getMessage());
         }
     }
 
