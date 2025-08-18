@@ -12,7 +12,8 @@ public interface CC_Parametros {
       //      "eclipse-workspace" + File.separator + "Estructura-Base-New_Perruqueria" + File.separator +
             //"CC_Logs_Perruqueria";
     
-    String gloDir =System.getProperty("user.dir");
+   // String gloDir =System.getProperty("user.dir");
+    String gloDir = new File("").getAbsolutePath();
 
     int gloColumnas = 2;
     String gloNombreCSV = "CSVParametersCarritoCompras.csv";
