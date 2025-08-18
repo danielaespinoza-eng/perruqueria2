@@ -2,16 +2,16 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-08-18T12:09:10 CLT" name="SuiteMascopet" finished-at="2025-08-18T12:10:06 CLT" duration-ms="56345">
+  <suite started-at="2025-08-18T15:57:47 CLT" name="SuiteMascopet" finished-at="2025-08-18T15:59:01 CLT" duration-ms="74221">
     <groups>
     </groups>
-    <test started-at="2025-08-18T12:09:10 CLT" name="TestMascopet" finished-at="2025-08-18T12:10:06 CLT" duration-ms="56345">
+    <test started-at="2025-08-18T15:57:47 CLT" name="TestMascopet" finished-at="2025-08-18T15:59:01 CLT" duration-ms="74221">
       <class name="test.java.carritocompras.CC_Test">
-        <test-method is-config="true" signature="beforeTestMethod()[pri:0, instance:test.java.carritocompras.CC_Test@4f209819]" started-at="2025-08-18T12:09:10 CLT" name="beforeTestMethod" finished-at="2025-08-18T12:09:10 CLT" duration-ms="775" status="PASS">
+        <test-method is-config="true" signature="beforeTestMethod()[pri:0, instance:test.java.carritocompras.CC_Test@4f209819]" started-at="2025-08-18T15:57:47 CLT" name="beforeTestMethod" finished-at="2025-08-18T15:57:48 CLT" duration-ms="1018" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeTestMethod -->
-        <test-method is-config="true" signature="beforeMethodMethod(java.lang.String,java.lang.reflect.Method)[pri:0, instance:test.java.carritocompras.CC_Test@4f209819]" started-at="2025-08-18T12:09:11 CLT" name="beforeMethodMethod" finished-at="2025-08-18T12:09:18 CLT" duration-ms="6865" status="PASS">
+        <test-method is-config="true" signature="beforeMethodMethod(java.lang.String,java.lang.reflect.Method)[pri:0, instance:test.java.carritocompras.CC_Test@4f209819]" started-at="2025-08-18T15:57:48 CLT" name="beforeMethodMethod" finished-at="2025-08-18T15:57:56 CLT" duration-ms="7814" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -27,7 +27,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethodMethod -->
-        <test-method signature="CC_QA_AgregarProductosAlCarrito(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:test.java.carritocompras.CC_Test@4f209819]" started-at="2025-08-18T12:09:18 CLT" name="CC_QA_AgregarProductosAlCarrito" data-provider="DataProductosMultiples" finished-at="2025-08-18T12:10:04 CLT" duration-ms="46677" status="PASS">
+        <test-method signature="CC_QA_AgregarProductosAlCarrito(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:test.java.carritocompras.CC_Test@4f209819]" started-at="2025-08-18T15:57:56 CLT" name="CC_QA_AgregarProductosAlCarrito" data-provider="DataProductosMultiples" finished-at="2025-08-18T15:58:58 CLT" duration-ms="62288" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -88,7 +88,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- CC_QA_AgregarProductosAlCarrito -->
-        <test-method is-config="true" signature="afterMethodMethod(org.testng.ITestResult)[pri:0, instance:test.java.carritocompras.CC_Test@4f209819]" started-at="2025-08-18T12:10:05 CLT" name="afterMethodMethod" finished-at="2025-08-18T12:10:05 CLT" duration-ms="49" status="PASS">
+        <test-method is-config="true" signature="afterMethodMethod(org.testng.ITestResult)[pri:0, instance:test.java.carritocompras.CC_Test@4f209819]" started-at="2025-08-18T15:58:59 CLT" name="afterMethodMethod" finished-at="2025-08-18T15:58:59 CLT" duration-ms="163" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -99,7 +99,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethodMethod -->
-        <test-method is-config="true" signature="afterTestMethod()[pri:0, instance:test.java.carritocompras.CC_Test@4f209819]" started-at="2025-08-18T12:10:05 CLT" name="afterTestMethod" finished-at="2025-08-18T12:10:06 CLT" duration-ms="1287" status="PASS">
+        <test-method is-config="true" signature="afterTestMethod()[pri:0, instance:test.java.carritocompras.CC_Test@4f209819]" started-at="2025-08-18T15:58:59 CLT" name="afterTestMethod" finished-at="2025-08-18T15:59:01 CLT" duration-ms="1889" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterTestMethod -->
