@@ -438,34 +438,31 @@ public class CC_PasosFuncionales {
         WebDriverWait wait = new WebDriverWait(driver, 10); // 10 segundos
 
         try {
+            // Esperar y hacer clic en el botón 'Finalizar Reserva'
             WebElement botonFinalizarReserva = wait.until(
                     ExpectedConditions.elementToBeClickable(By.xpath(CC_Localizadores.btnFinalizarReserva))
             );
-
             botonFinalizarReserva.click();
             System.out.println("[OK] ✅ Se hizo clic en el botón 'Finalizar Reserva'");
 
-            // Esperar la aparición del alert
-            wait.until(ExpectedConditions.alertIsPresent());
-
-            // Cambiar el foco al alert
-            Alert alert = driver.switchTo().alert();
+            // Esperar que aparezca el alert
+            Alert alert = wait.until(ExpectedConditions.alertIsPresent());
             String textoAlerta = alert.getText();
             System.out.println("[OK] 🚨 Se detectó un alert con el texto: '" + textoAlerta + "'");
 
-            // Validar el texto esperado
+            // Validar texto del alert
             if (textoAlerta.equalsIgnoreCase("reserva finalizada")) {
                 System.out.println("✅ El texto del alert es correcto: 'reserva finalizada'");
             } else {
                 System.out.println("[WARNING] ⚠️ El texto del alert no es el esperado. Se recibió: '" + textoAlerta + "'");
             }
 
+            // Aceptar el alert inmediatamente para evitar UnhandledAlertException
+            alert.accept();
+            System.out.println("[OK] ✅ Alert aceptado correctamente");
+
             // Tomar screenshot al finalizar correctamente
             GG_Utils.takeScreenshotPassed("finalizarReserva_OK");
-
-            // Aceptar el alert si lo deseas
-            // alert.accept();
-            // System.out.println("[OK] ✅ Se aceptó el alert correctamente");
 
         } catch (Exception e) {
             System.out.println("[ERROR] ❌ Falló al hacer clic o manejar el alert: " + e.getMessage());
@@ -476,5 +473,8 @@ public class CC_PasosFuncionales {
             throw new RuntimeException(e);
         }
     }
+
+
+
 
 }

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="TestSuite" time="58.04" tests="1" errors="0" skipped="0" failures="1">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="TestSuite" time="58.636" tests="1" errors="0" skipped="0" failures="0">
   <properties>
     <property name="jansi.mode" value="force"/>
     <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
@@ -26,7 +26,7 @@
     <property name="user.variant" value=""/>
     <property name="stderr.encoding" value="UTF-8"/>
     <property name="os.name" value="Windows 11"/>
-    <property name="classworlds.conf" value="C:\Users\TG\eclipse-workspace\.metadata\.plugins\org.eclipse.m2e.launching\launches\m2conf3273654992654439383.tmp"/>
+    <property name="classworlds.conf" value="C:\Users\TG\eclipse-workspace\.metadata\.plugins\org.eclipse.m2e.launching\launches\m2conf15282442083934503111.tmp"/>
     <property name="sun.jnu.encoding" value="Cp1252"/>
     <property name="stdout.encoding" value="UTF-8"/>
     <property name="java.library.path" value="C:\Users\TG\.p2\pool\plugins\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_21.0.7.v20250502-0916\jre\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:/Users/TG/.p2/pool/plugins/org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_21.0.7.v20250502-0916/jre/bin/server;C:/Users/TG/.p2/pool/plugins/org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_21.0.7.v20250502-0916/jre/bin;C:\Python313\Scripts\;C:\Python313\;C:\Program Files\Common Files\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\maven\apache-maven-3.9.9\bin;C:\Program Files\dotnet\;C:\Program Files (x86)\Windows Kits\10\Windows Performance Toolkit\;C:\Program Files\Java\jdk-11\bin;C:\Program Files\Java\jdk-21\bin;C:\Users\TestGroup.DESKTOP-97H2JQF\AppData\Local\Android\Sdk\platform-tools;C:\Users\TestGroup.DESKTOP-97H2JQF\AppData\Local\Android\Sdk\platform-tools;C:\Users\TestGroup.DESKTOP-97H2JQF\AppData\Local\Android\Sdk\cmdline-tools\latest;C:\Users\TestGroup.DESKTOP-97H2JQF\AppData\Local\Android\Sdk\cmdline-tools\latest\bin;C:\ProgramData\chocolatey\bin;C:\Users\TestGroup.DESKTOP-97H2JQF\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\MSYS2;C:\Program Files\Java\jdk-11\bin;C:\Program Files\Git\cmd;C:\Users\TG\AppData\Local\Microsoft\WindowsApps;C:\Users\TG\AppData\Local\Programs\Microsoft VS Code\bin;C:\WINDOWS\system32;;."/>
@@ -59,106 +59,8 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="sun.cpu.endian" value="little"/>
     <property name="java.vendor.version" value="Temurin-21.0.7+6"/>
-    <property name="m2e.build.project.data.socket.port" value="61299"/>
+    <property name="m2e.build.project.data.socket.port" value="51323"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase name="CC_QA_AgregarProductosAlCarrito" classname="test.java.carritocompras.CC_Test" time="47.404">
-    <failure message="unexpected alert open: {Alert text : Reserva finalizada:&#10;Cliente: Daniela&#10;Fecha: 2025-02-10&#10;Profesional: Profesional 2}&#10;  (Session info: chrome=139.0.7258.127): Reserva finalizada:&#10;Cliente: Daniela&#10;Fecha: 2025-02-10&#10;Profesional: Profesional 2&#10;Build info: version: &apos;3.8.1&apos;, revision: &apos;6e95a6684b&apos;, time: &apos;2017-12-01T18:33:54.468Z&apos;&#10;System info: host: &apos;DESKTOP-97H2JQF&apos;, ip: &apos;192.168.10.120&apos;, os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.7&apos;&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 139.0.7258.127, chrome: {chromedriverVersion: 138.0.7204.94 (545025748884..., userDataDir: C:\Users\TG\AppData\Local\T...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:65352}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: ignore, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}&#10;Session ID: 8c51794296d0ee6fd0a66f93b8f8b03e" type="org.openqa.selenium.UnhandledAlertException">org.openqa.selenium.UnhandledAlertException: 
-unexpected alert open: {Alert text : Reserva finalizada:
-Cliente: Daniela
-Fecha: 2025-02-10
-Profesional: Profesional 2}
-  (Session info: chrome=139.0.7258.127): Reserva finalizada:
-Cliente: Daniela
-Fecha: 2025-02-10
-Profesional: Profesional 2
-Build info: version: '3.8.1', revision: '6e95a6684b', time: '2017-12-01T18:33:54.468Z'
-System info: host: 'DESKTOP-97H2JQF', ip: '192.168.10.120', os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.7'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 139.0.7258.127, chrome: {chromedriverVersion: 138.0.7204.94 (545025748884..., userDataDir: C:\Users\TG\AppData\Local\T...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:65352}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: ignore, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 8c51794296d0ee6fd0a66f93b8f8b03e
-	at test.java.carritocompras.CC_Test.CC_QA_AgregarProductosAlCarrito(CC_Test.java:67)
-</failure>
-    <system-out><![CDATA[⚠️ Fila con columnas insuficientes: 
-⚠️ Fila con columnas insuficientes: 
-⚠️ Fila con columnas insuficientes: 
-⚠️ Fila con columnas insuficientes: 
-🔎 Buscando producto desde buscador: Baño y Peinado
-✅ Producto agregado al carrito desde buscador: Baño y Peinado
-🔎 Buscando producto desde buscador: Corte de Uñas
-✅ Producto agregado al carrito desde buscador: Corte de Uñas
-🔄 Realizando búsqueda en blanco para mostrar todos los productos
-[OK] ✅ Producto agregado desde lista general: Baño y Corte
-📸 Screenshot guardado en PASSED: C:\Users\TG\eclipse-workspace\Estructura-Base-New_Perruqueria\CC_Logs_Perruqueria\screenshots\passed\Baño y Corte_20250818_114513.png
-Cantidad esperada: 3, cantidad actual: 3
-Validación exitosa: la cantidad del carrito es correcta
-📸 Screenshot guardado en PASSED: C:\Users\TG\eclipse-workspace\Estructura-Base-New_Perruqueria\CC_Logs_Perruqueria\screenshots\passed\validarProductoAgregado_FALLA_3_20250818_114515.png
-✅ Se hizo click en el botón 'Ir a la bolsa de compra'
-📸 Screenshot guardado en PASSED: C:\Users\TG\eclipse-workspace\Estructura-Base-New_Perruqueria\CC_Logs_Perruqueria\screenshots\passed\irABolsaDeCompras_OK_20250818_114516.png
-✅ Clic en boton '+' 'Baño y Corte' #1
-✅ Clic en boton '+' 'Baño y Corte' #2
-Cantidad final para 'Baño y Corte': 3
-📸 Screenshot guardado en PASSED: C:\Users\TG\eclipse-workspace\Estructura-Base-New_Perruqueria\CC_Logs_Perruqueria\screenshots\passed\aumentarCantidad_Baño y Corte_OK_20250818_114522.png
-✅ Clic en boton '+' 'Baño y Peinado' #1
-✅ Clic en boton '+' 'Baño y Peinado' #2
-Cantidad final para 'Baño y Peinado': 3
-📸 Screenshot guardado en PASSED: C:\Users\TG\eclipse-workspace\Estructura-Base-New_Perruqueria\CC_Logs_Perruqueria\screenshots\passed\aumentarCantidad_Baño y Peinado_OK_20250818_114528.png
-✅ Clic en botón '-' para 'Baño y Peinado' #1
-✅ Clic en botón '-' para 'Baño y Peinado' #2
-📸 Screenshot guardado en PASSED: C:\Users\TG\eclipse-workspace\Estructura-Base-New_Perruqueria\CC_Logs_Perruqueria\screenshots\passed\disminuirCantidad_Baño y Peinado_OK_20250818_114533.png
-✅ Clic en botón '-' para 'Baño y Corte' #1
-📸 Screenshot guardado en PASSED: C:\Users\TG\eclipse-workspace\Estructura-Base-New_Perruqueria\CC_Logs_Perruqueria\screenshots\passed\disminuirCantidad_Baño y Corte_OK_20250818_114536.png
-✅ Producto 'Corte de Uñas' eliminado del carrito.
-📸 Screenshot guardado en PASSED: C:\Users\TG\eclipse-workspace\Estructura-Base-New_Perruqueria\CC_Logs_Perruqueria\screenshots\passed\eliminarProducto_Corte de Uñas_OK_20250818_114537.png
-Se hizo clic en el botón 'Ir a la Finalización de la Reserva'
-✅ Navegación a la página de finalización de la reserva exitosa.
-📸 Screenshot guardado en PASSED: C:\Users\TG\eclipse-workspace\Estructura-Base-New_Perruqueria\CC_Logs_Perruqueria\screenshots\passed\irAFinalizacionReserva_OK_20250818_114538.png
-✅ Nombre del Cliente ingresado correctamente: Daniela
-✅ Fecha del Servicio ingresada correctamente: 2025-02-10
-✅ Profesional seleccionado correctamente: Profesional 2
-✅ Nombre de la Mascota ingresado correctamente: Rocky
-✅ Edad de la Mascota ingresada correctamente: 4
-✅ Unidad de Edad seleccionada correctamente: Años
-✅ Raza de la Mascota ingresada correctamente: Poodle
-✅ Formulario completado correctamente y validado.
-📸 Screenshot guardado en PASSED: C:\Users\TG\eclipse-workspace\Estructura-Base-New_Perruqueria\CC_Logs_Perruqueria\screenshots\passed\completarFormularioReserva_OK_20250818_114546.png
-[OK] ✅ Se hizo clic en el botón 'Finalizar Reserva'
-[OK] 🚨 Se detectó un alert con el texto: 'Reserva finalizada:
-Cliente: Daniela
-Fecha: 2025-02-10
-Profesional: Profesional 2'
-[WARNING] ⚠️ El texto del alert no es el esperado. Se recibió: 'Reserva finalizada:
-Cliente: Daniela
-Fecha: 2025-02-10
-Profesional: Profesional 2'
-[ERROR] ❌ Falló al hacer clic o manejar el alert: unexpected alert open: {Alert text : Reserva finalizada:
-Cliente: Daniela
-Fecha: 2025-02-10
-Profesional: Profesional 2}
-  (Session info: chrome=139.0.7258.127): Reserva finalizada:
-Cliente: Daniela
-Fecha: 2025-02-10
-Profesional: Profesional 2
-Build info: version: '3.8.1', revision: '6e95a6684b', time: '2017-12-01T18:33:54.468Z'
-System info: host: 'DESKTOP-97H2JQF', ip: '192.168.10.120', os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.7'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 139.0.7258.127, chrome: {chromedriverVersion: 138.0.7204.94 (545025748884..., userDataDir: C:\Users\TG\AppData\Local\T...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:65352}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: ignore, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 8c51794296d0ee6fd0a66f93b8f8b03e
-[Listener] Alert detectado antes de screenshot: Reserva finalizada:
-Cliente: Daniela
-Fecha: 2025-02-10
-Profesional: Profesional 2
-[Listener] Screenshot guardado en: C:\Users\TG\eclipse-workspace\Estructura-Base-New_Perruqueria\CC_Logs_Perruqueria\screenshots\failed\CC_QA_AgregarProductosAlCarrito_20250818_114548.png
-]]></system-out>
-    <system-err><![CDATA[Starting ChromeDriver 138.0.7204.94 (5450257488848fa5bab09dea663ce77edfb17672-refs/branch-heads/7204_50@{#10}) on port 38051
-Only local connections are allowed.
-Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
-ChromeDriver was started successfully on port 38051.
-[1755531897.921][WARNING]: Deprecated chrome option is ignored: useAutomationExtension
-[1755531897.921][WARNING]: Deprecated chrome option is ignored: useAutomationExtension
-[1755531899.696][WARNING]: This version of ChromeDriver has not been tested with Chrome version 139.
-Aug 18, 2025 11:45:00 AM org.openqa.selenium.remote.ProtocolHandshake createSession
-INFO: Detected dialect: W3C
-]]></system-err>
-  </testcase>
+  <testcase name="CC_QA_AgregarProductosAlCarrito" classname="test.java.carritocompras.CC_Test" time="47.148"/>
 </testsuite>
