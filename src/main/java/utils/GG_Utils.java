@@ -77,6 +77,34 @@ public class GG_Utils {
 		}
 	}
 
+	public static String takeScreenshotPassed(String nameMethod) {
+	    // Obtener fecha y hora para el screenshot
+	    LocalTime hora = LocalTime.now();
+	    DateTimeFormatter fHora = DateTimeFormatter.ofPattern("HHmmss");
+
+	    LocalDate fecha = LocalDate.now();
+	    DateTimeFormatter fFecha = DateTimeFormatter.ofPattern("yyyyMMdd");
+
+	    String timestamp = fecha.format(fFecha) + "_" + hora.format(fHora);
+
+	    // Carpeta "passed" en lugar de "failed"
+	    String fileName = CC_Parametros.gloDir + File.separator + "screenshots" + File.separator +
+	            "passed" + File.separator + nameMethod + "_" + timestamp;
+
+	    try {
+	        File src = ((TakesScreenshot) GG_BaseTest.driver).getScreenshotAs(OutputType.FILE);
+	        File newFile = new File(fileName + ".png");
+	        FileUtils.copyFile(src, newFile);
+
+	        System.out.println("📸 Screenshot guardado en PASSED: " + newFile.getAbsolutePath());
+	        return newFile.getAbsolutePath();
+
+	    } catch (IOException e) {
+	        e.printStackTrace();
+	        return "";
+	    }
+	}
+
 	public static void outputInfo(String output) {
 		GG_BaseTest.logger.info(output);
 		System.out.println(output);

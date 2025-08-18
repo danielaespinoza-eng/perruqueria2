@@ -9,10 +9,34 @@
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
 <tr><th colspan="8">SuiteMascopet</th></tr>
-<tr><td><a href="#t0">TestMascopet</a></td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">63,232</td><td></td><td></td></tr>
+<tr><td><a href="#t0">TestMascopet</a></td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num">55,662</td><td></td><td></td></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">SuiteMascopet</th></tr></tbody><tbody id="t0"><tr><th colspan="4">TestMascopet &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">test.java.carritocompras.CC_Test</td><td><a href="#m0">CC_QA_AgregarProductosAlCarrito</a></td><td rowspan="1">1755030031828</td><td rowspan="1">49396</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">SuiteMascopet</th></tr></tbody><tbody id="t0"><tr><th colspan="4">TestMascopet &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">test.java.carritocompras.CC_Test</td><td><a href="#m0">CC_QA_AgregarProductosAlCarrito</a></td><td rowspan="1">1755531901280</td><td rowspan="1">46344</td></tr></tbody>
 </table>
-<h2>TestMascopet</h2><h3 id="m0">test.java.carritocompras.CC_Test#CC_QA_AgregarProductosAlCarrito</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th><th>Parameter #3</th><th>Parameter #4</th><th>Parameter #5</th><th>Parameter #6</th><th>Parameter #7</th><th>Parameter #8</th><th>Parameter #9</th><th>Parameter #10</th><th>Parameter #11</th></tr><tr class="param stripe"><td>Baño y Peinado</td><td>Baño y Corte</td><td>Corte de Uñas</td><td>3</td><td>Daniela</td><td>2025-02-10</td><td>Profesional 2</td><td>Rocky</td><td>4</td><td>Años</td><td>Poodle</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>TestMascopet</h2><h3 id="m0">test.java.carritocompras.CC_Test#CC_QA_AgregarProductosAlCarrito</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th><th>Parameter #3</th><th>Parameter #4</th><th>Parameter #5</th><th>Parameter #6</th><th>Parameter #7</th><th>Parameter #8</th><th>Parameter #9</th><th>Parameter #10</th><th>Parameter #11</th></tr><tr class="param stripe"><td>Baño y Peinado</td><td>Baño y Corte</td><td>Corte de Uñas</td><td>3</td><td>Daniela</td><td>2025-02-10</td><td>Profesional 2</td><td>Rocky</td><td>4</td><td>Años</td><td>Poodle</td></tr><tr><th colspan="11">Exception</th></tr><tr><td colspan="11"><div class="stacktrace">org.openqa.selenium.UnhandledAlertException: unexpected alert open: {Alert text : Reserva finalizada:
+Cliente: Daniela
+Fecha: 2025-02-10
+Profesional: Profesional 2}
+  (Session info: chrome=139.0.7258.127): Reserva finalizada:
+Cliente: Daniela
+Fecha: 2025-02-10
+Profesional: Profesional 2
+Build info: version: &apos;3.8.1&apos;, revision: &apos;6e95a6684b&apos;, time: &apos;2017-12-01T18:33:54.468Z&apos;
+System info: host: &apos;DESKTOP-97H2JQF&apos;, ip: &apos;192.168.10.120&apos;, os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.7&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 139.0.7258.127, chrome: {chromedriverVersion: 138.0.7204.94 (545025748884..., userDataDir: C:\Users\TG\AppData\Local\T...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:65352}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: ignore, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 8c51794296d0ee6fd0a66f93b8f8b03e
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:120)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:164)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:601)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:658)
+	at org.openqa.selenium.remote.RemoteWebDriver.getScreenshotAs(RemoteWebDriver.java:343)
+	at main.java.utils.GG_Utils.takeScreenshotPassed(GG_Utils.java:95)
+	at main.java.pageEvents.CC_PasosFuncionales.finalizarReserva(CC_PasosFuncionales.java:474)
+	at test.java.carritocompras.CC_Test.CC_QA_AgregarProductosAlCarrito(CC_Test.java:67)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+... Removed 28 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>

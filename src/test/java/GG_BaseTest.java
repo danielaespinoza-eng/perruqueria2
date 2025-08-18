@@ -134,8 +134,8 @@ public class GG_BaseTest {
             //Skip captcha
             ChromeOptions options = new ChromeOptions();
 
-            options.addArguments("--headless", "--disable-gpu",
-            //options.addArguments("--disable-gpu",
+            //options.addArguments("--headless", "--disable-gpu",
+            options.addArguments("--disable-gpu",
             "--window-size=1920,1200",
             "--ignore-certificate-errors", "--disable-extensions", "--no-sandbox",
             "--disable-dev-shm-usage");

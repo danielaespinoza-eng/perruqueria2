@@ -18,6 +18,7 @@ import java.util.List;
 import java.util.regex.Pattern;
 
 import main.java.pageObjects.CC_Localizadores;
+import main.java.utils.GG_Utils;
 
 public class CC_PasosFuncionales {
     private WebDriver driver;
@@ -47,6 +48,8 @@ public class CC_PasosFuncionales {
             // --- 1. Agregar los productos 1 y 3 usando el buscador ---
             for (int i = 0; i < productos.size(); i++) {
                 String producto = productos.get(i);
+                
+                
                 
                 // Solo usar buscador para el primero y el tercero
                 if (i == 0 || i == 2) {
@@ -120,11 +123,14 @@ public class CC_PasosFuncionales {
                 System.out.println("[ERROR] ❌ Producto no encontrado en lista general: " + productoLista);
                 throw new RuntimeException("Producto no encontrado en lista: " + productoLista);
             }
+            GG_Utils.takeScreenshotPassed(productoLista);
 
         } catch (Exception e) {
             System.out.println("[ERROR] ❌ Error durante la selección de productos: " + e.getMessage());
             throw new RuntimeException(e);
         }
+        
+        
     }//fin agregar produxto al carro
     
     //validar producto agregado
@@ -141,9 +147,11 @@ public class CC_PasosFuncionales {
 
         if (!valorActual.equals(cantidadEsperada)) {
             System.out.println("Error en validación de cantidad del carrito");
+            GG_Utils.takeScreenshotPassed("validarProductoAgregado_FALLA_" + valorActual);
             throw new AssertionError("Error: contador esperado = " + cantidadEsperada + " pero fue " + valorActual);
         } else {
             System.out.println("Validación exitosa: la cantidad del carrito es correcta");
+            GG_Utils.takeScreenshotPassed("validarProductoAgregado_FALLA_" + valorActual);
         }
     }
     
@@ -154,6 +162,7 @@ public class CC_PasosFuncionales {
             WebElement botonBolsa = wait.until(ExpectedConditions.elementToBeClickable(By.xpath(CC_Localizadores.botonIrABolsa)));
             botonBolsa.click();
             System.out.println("✅ Se hizo click en el botón 'Ir a la bolsa de compra'");
+            GG_Utils.takeScreenshotPassed("irABolsaDeCompras_OK");
         } catch (Exception e) {
             System.out.println("No se pudo hacer click en el botón 'Ir a la bolsa de compra': " + e.getMessage());
             throw e;
@@ -202,6 +211,7 @@ public class CC_PasosFuncionales {
             WebElement inputCantidad = contenedorProducto.findElement(By.xpath(CC_Localizadores.inputCantidadProducto));
             String valorCantidad = inputCantidad.getAttribute("value");
             System.out.println("Cantidad final para '" + nombreProducto + "': " + valorCantidad);
+            GG_Utils.takeScreenshotPassed("aumentarCantidad_" + nombreProducto + "_OK");
         } catch (Exception e) {
             System.out.println("Error al leer la cantidad final de '" + nombreProducto + "': " + e.getMessage());
         }
@@ -217,7 +227,7 @@ public class CC_PasosFuncionales {
         while (clicsRealizados < cantidadClicks && intentosFallidos < maxIntentos) {
             try {
                 WebElement contenedorProducto = wait.until(ExpectedConditions.visibilityOfElementLocated(
-                		By.xpath(String.format(CC_Localizadores.contenedorProductos, nombreProducto))
+                    By.xpath(String.format(CC_Localizadores.contenedorProductos, nombreProducto))
                 ));
 
                 // Encuentra todos los botones flotantes dentro del contenedor
@@ -236,15 +246,22 @@ public class CC_PasosFuncionales {
                 intentosFallidos++;
             } catch (Exception e) {
                 System.out.println("[ERROR] Error al disminuir '" + nombreProducto + "': " + e.getMessage());
+                GG_Utils.takeScreenshotPassed("disminuirCantidad_" + nombreProducto + "_FALLA");
                 break;
             }
         }
 
         if (clicsRealizados < cantidadClicks) {
+            GG_Utils.takeScreenshotPassed("disminuirCantidad_" + nombreProducto + "_FALLA");
             throw new RuntimeException("No se pudieron eliminar " + cantidadClicks + " unidades de '" + nombreProducto + "'. Solo se eliminaron: " + clicsRealizados);
+        } else {
+            // Screenshot al finalizar correctamente el paso
+            GG_Utils.takeScreenshotPassed("disminuirCantidad_" + nombreProducto + "_OK");
         }
     }
+
     //eliminar producto por nombre
+ // eliminar producto por nombre
     public void eliminarProductoPorNombre(String nombreProducto) {
         WebDriverWait wait = new WebDriverWait(driver, 5);
         int intentos = 0;
@@ -253,7 +270,7 @@ public class CC_PasosFuncionales {
         while (intentos < maxIntentos) {
             try {
                 WebElement contenedorProducto = wait.until(ExpectedConditions.visibilityOfElementLocated(
-                		By.xpath(String.format(CC_Localizadores.contenedorProductos, nombreProducto))
+                    By.xpath(String.format(CC_Localizadores.contenedorProductos, nombreProducto))
                 ));
 
                 WebElement botonEliminar = contenedorProducto.findElement(
@@ -264,22 +281,32 @@ public class CC_PasosFuncionales {
                 botonEliminar.click();
 
                 System.out.println("✅ Producto '" + nombreProducto + "' eliminado del carrito.");
+
+                // Screenshot al finalizar correctamente el paso
+                GG_Utils.takeScreenshotPassed("eliminarProducto_" + nombreProducto + "_OK");
+
                 return;
 
             } catch (org.openqa.selenium.StaleElementReferenceException e) {
                 System.out.println("[WARN] Elemento obsoleto para '" + nombreProducto + "'. Reintentando...");
             } catch (Exception e) {
                 System.out.println("[ERROR] No se pudo eliminar '" + nombreProducto + "': " + e.getMessage());
+
+                // Screenshot en caso de fallo
+                GG_Utils.takeScreenshotPassed("eliminarProducto_" + nombreProducto + "_FALLA");
                 break;
             }
 
             intentos++;
         }
 
+        // Screenshot si no se pudo eliminar después de todos los intentos
+        GG_Utils.takeScreenshotPassed("eliminarProducto_" + nombreProducto + "_FALLA");
         throw new RuntimeException("No se pudo eliminar el producto '" + nombreProducto + "' del carrito.");
     }
+
     
-    //ir a finalizar reserva
+ // ir a finalizar reserva
     public void irAFinalizacionReserva() {
         WebDriverWait wait = new WebDriverWait(driver, 10); // aumento tiempo de espera
 
@@ -298,12 +325,20 @@ public class CC_PasosFuncionales {
 
             System.out.println("✅ Navegación a la página de finalización de la reserva exitosa.");
 
+            // Screenshot al finalizar correctamente
+            GG_Utils.takeScreenshotPassed("irAFinalizacionReserva_OK");
+
         } catch (Exception e) {
             System.out.println("[ERROR] No se pudo hacer clic en el botón de finalización: " + e.getMessage());
+
+            // Screenshot en caso de fallo
+            GG_Utils.takeScreenshotPassed("irAFinalizacionReserva_FALLA");
+
+            throw new RuntimeException(e);
         }
     }  
-    
-    //inicio completar formulario
+
+ // inicio completar formulario
     public void completarFormularioReserva(
             String nombreCliente,
             String fechaServicio,
@@ -331,7 +366,6 @@ public class CC_PasosFuncionales {
                 "arguments[0].dispatchEvent(new Event('change', { bubbles: true }));";
 
             ((JavascriptExecutor) driver).executeScript(script, inputFecha, fechaServicio);
-
             Thread.sleep(300); // opcional para esperar que se procese
 
             String valorFecha = inputFecha.getAttribute("value");
@@ -385,20 +419,28 @@ public class CC_PasosFuncionales {
 
             System.out.println("✅ Formulario completado correctamente y validado.");
 
+            // Screenshot al finalizar correctamente
+            GG_Utils.takeScreenshotPassed("completarFormularioReserva_OK");
+
         } catch (Exception e) {
             System.out.println("[ERROR] ❌ Error al completar el formulario: " + e.getMessage());
+
+            // Screenshot en caso de error
+            GG_Utils.takeScreenshotPassed("completarFormularioReserva_FALLA");
+
             throw new RuntimeException(e);
         }
     }
 
-    //inicio finalizar reserva
+
+ // inicio finalizar reserva
     public void finalizarReserva() {
-    	WebDriverWait wait = new WebDriverWait(driver, 10); // 10 segundos
+        WebDriverWait wait = new WebDriverWait(driver, 10); // 10 segundos
 
         try {
-        	WebElement botonFinalizarReserva = wait.until(
-        		    ExpectedConditions.elementToBeClickable(By.xpath(CC_Localizadores.btnFinalizarReserva))
-        		);
+            WebElement botonFinalizarReserva = wait.until(
+                    ExpectedConditions.elementToBeClickable(By.xpath(CC_Localizadores.btnFinalizarReserva))
+            );
 
             botonFinalizarReserva.click();
             System.out.println("[OK] ✅ Se hizo clic en el botón 'Finalizar Reserva'");
@@ -413,18 +455,26 @@ public class CC_PasosFuncionales {
 
             // Validar el texto esperado
             if (textoAlerta.equalsIgnoreCase("reserva finalizada")) {
-                System.out.println("✅ El texto del alert es correcto: 'Reserva finalizada");
+                System.out.println("✅ El texto del alert es correcto: 'reserva finalizada'");
             } else {
                 System.out.println("[WARNING] ⚠️ El texto del alert no es el esperado. Se recibió: '" + textoAlerta + "'");
             }
 
-            // Aceptar el alert
-            //alert.accept();
-           // System.out.println("[OK] ✅ Se aceptó el alert correctamente");
+            // Tomar screenshot al finalizar correctamente
+            GG_Utils.takeScreenshotPassed("finalizarReserva_OK");
+
+            // Aceptar el alert si lo deseas
+            // alert.accept();
+            // System.out.println("[OK] ✅ Se aceptó el alert correctamente");
 
         } catch (Exception e) {
             System.out.println("[ERROR] ❌ Falló al hacer clic o manejar el alert: " + e.getMessage());
+
+            // Screenshot en caso de error
+            GG_Utils.takeScreenshotPassed("finalizarReserva_FALLA");
+
             throw new RuntimeException(e);
         }
     }
+
 }

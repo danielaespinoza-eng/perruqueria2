@@ -8,7 +8,11 @@
     <classes>
       <class name="test.java.carritocompras.CC_Test">
         <methods>
+          <include name="beforeTestMethod"/>
           <include name="CC_QA_AgregarProductosAlCarrito" invocation-numbers="0"/>
+          <include name="afterTestMethod"/>
+          <include name="afterMethodMethod"/>
+          <include name="beforeMethodMethod"/>
         </methods>
       </class> <!-- test.java.carritocompras.CC_Test -->
     </classes>
