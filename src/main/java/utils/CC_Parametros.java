@@ -8,9 +8,11 @@ public interface CC_Parametros {
     String nombreAutomatizador = "[Flujo-Automatizado]";
     String nombreProyecto = "[*Proyecto*]";
 
-    String gloDir = "C:" + File.separator + "Users" + File.separator + "TG" + File.separator +
-            "eclipse-workspace" + File.separator + "Estructura-Base-New_Perruqueria" + File.separator +
-            "CC_Logs_Perruqueria";
+    //String gloDir = "C:" + File.separator + "Users" + File.separator + "TG" + File.separator +
+      //      "eclipse-workspace" + File.separator + "Estructura-Base-New_Perruqueria" + File.separator +
+            //"CC_Logs_Perruqueria";
+    
+    String gloDir =System.getProperty("user.dir");
 
     int gloColumnas = 2;
     String gloNombreCSV = "CSVParametersCarritoCompras.csv";
