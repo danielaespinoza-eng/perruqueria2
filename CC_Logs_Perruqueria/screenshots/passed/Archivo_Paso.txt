@@ -1,1 +1,1 @@
-C:\Users\TG\eclipse-workspace\Estructura-Base-New_Perruqueria\CC_Logs_Perruqueria\screenshots\passed\CC_QA_AgregarProductosAlCarrito_20250818_095533.png
+C:\Users\TG\eclipse-workspace\Estructura-Base-New_Perruqueria\CC_Logs_Perruqueria\screenshots\passed\CC_QA_AgregarProductosAlCarrito_20250818_102830.png

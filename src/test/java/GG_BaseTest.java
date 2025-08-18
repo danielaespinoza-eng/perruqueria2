@@ -127,20 +127,19 @@ public class GG_BaseTest {
         extent.flush();
     }
 
-    public void setUpDriver(String browserName) {
+    public void setUpDriver(String browserName){
         if (browserName.equalsIgnoreCase("chrome")) {
-            System.setProperty("webdriver.chrome.driver", 
-                CC_Parametros.gloDir + File.separator + "drivers" + File.separator + "chromedriver.exe");
+            System.setProperty("webdriver.chrome.driver", CC_Parametros.gloDir + File.separator + "drivers" + File.separator + "chromedriver.exe");
 
-            // Configuración de Chrome
+            //Skip captcha
             ChromeOptions options = new ChromeOptions();
-            options.addArguments("--disable-gpu",
-                                 "--window-size=1920,1200",
-                                 "--ignore-certificate-errors",
-                                 "--disable-extensions",
-                                 "--no-sandbox",
-                                 "--disable-dev-shm-usage");
-            
+
+            options.addArguments("--headless", "--disable-gpu",
+            //options.addArguments("--disable-gpu",
+            "--window-size=1920,1200",
+            "--ignore-certificate-errors", "--disable-extensions", "--no-sandbox",
+            "--disable-dev-shm-usage");
+
             options.setExperimentalOption("excludeSwitches", Collections.singletonList("enable-automation"));
             options.setExperimentalOption("useAutomationExtension", false);
             options.addArguments("--incognito", "--disable-blink-features=AutomationControlled");
@@ -148,27 +147,21 @@ public class GG_BaseTest {
             options.addArguments("--disable-features=SafetyTipUI,SafeBrowsingEnhancedProtection");
             options.addArguments("--disable-blink-features=BlockCredentialedSubresources");
             options.addArguments("--guest");
-
+            
             options.setCapability(CapabilityType.UNEXPECTED_ALERT_BEHAVIOUR, UnexpectedAlertBehaviour.IGNORE);
-
-            if (CC_Test.gloVerFlujo.equals("S")) { 
-                // Ver el flujo en el Browser (ejecución local)
-                driver = new ChromeDriver(options);
+            if (CC_Test.gloVerFlujo.equals("S")) { //Ver el Flujo en el Browser
+            	driver = new ChromeDriver(options);
             } else {
-                // Ejecución en background (Jenkins u otro servidor)
-                options.addArguments("--headless=new"); // 🚀 Aquí está la diferencia
-                driver = new ChromeDriver(options);
+            	driver = new ChromeDriver(options); //el argumento options es para que se ejecute en background
             }
-
+            //Skip captcha
+            
         } else if (browserName.equalsIgnoreCase("edge")) {
-            System.setProperty("webdriver.edge.driver", 
-                CC_Parametros.gloDir + File.separator + "drivers" + File.separator + "msedgedriver.exe");
+            System.setProperty("webdriver.edge.driver", CC_Parametros.gloDir + File.separator + "drivers" + File.separator + "msedgedriver.exe");
             driver = new EdgeDriver();
         } else {
-            System.setProperty("webdriver.chrome.driver", 
-                CC_Parametros.gloDir + File.separator + "drivers" + File.separator + "chromedriver.exe");
+            System.setProperty("webdriver.chrome.driver", CC_Parametros.gloDir + File.separator + "drivers" + File.separator + "chromedriver.exe");
             driver = new ChromeDriver();
         }
     }
-
 }
