@@ -133,7 +133,8 @@ public class GG_BaseTest {
 
             //Skip captcha
             ChromeOptions options = new ChromeOptions();
-
+            
+            //Agregan parametros al navegador
             //options.addArguments("--headless", "--disable-gpu",
             options.addArguments("--disable-gpu",
             "--window-size=1920,1200",
@@ -154,8 +155,7 @@ public class GG_BaseTest {
             } else {
             	driver = new ChromeDriver(options); //el argumento options es para que se ejecute en background
             }
-            //Skip captcha
-            
+                        
         } else if (browserName.equalsIgnoreCase("edge")) {
             System.setProperty("webdriver.edge.driver", CC_Parametros.gloDir + File.separator + "drivers" + File.separator + "msedgedriver.exe");
             driver = new EdgeDriver();
