@@ -5,6 +5,12 @@
 	<groupId>com.southbridge.estructure</groupId>
 	<artifactId>southbrigde-base-estructure</artifactId>
 	<version>1.0-SNAPSHOT</version>
+	properties>
+  		<sonar.organization>danielaespinoza-eng</sonar.organization>
+		<sonar.host.url>https://sonarcloud.io</sonar.host.url>
+		<sonar.token>f4cb2370504bc0e5817b883279cbf55a948a0ad8</sonar.token>
+		<sonar.exclusions>src/test/java/**/**</sonar.exclusions>
+	</properties>
 	<build>
 		<sourceDirectory>src</sourceDirectory>
 		<plugins>
