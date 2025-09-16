@@ -1,4 +1,35 @@
 -------------------------------------------------------------------------------
 Test set: TestSuite
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 87.427 sec - in TestSuite
+Tests run: 3, Failures: 1, Errors: 0, Skipped: 2, Time elapsed: 10.156 sec <<< FAILURE! - in TestSuite
+beforeMethodMethod(test.java.carritocompras.CC_Test)  Time elapsed: 8.485 sec  <<< FAILURE!
+org.openqa.selenium.SessionNotCreatedException: 
+session not created: This version of ChromeDriver only supports Chrome version 138
+Current browser version is 140.0.7339.128 with binary path C:\Program Files\Google\Chrome\Application\chrome.exe
+Build info: version: '3.8.1', revision: '6e95a6684b', time: '2017-12-01T18:33:54.468Z'
+System info: host: 'DESKTOP-97H2JQF', ip: '192.168.10.100', os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.6'
+Driver info: driver.version: ChromeDriver
+remote stacktrace: 	GetHandleVerifier [0x0x7ff650a36f75+76917]
+	GetHandleVerifier [0x0x7ff650a36fd0+77008]
+	(No symbol) [0x0x7ff6507e9dea]
+	(No symbol) [0x0x7ff65082e1df]
+	(No symbol) [0x0x7ff65082d22b]
+	(No symbol) [0x0x7ff650826e2a]
+	(No symbol) [0x0x7ff650822675]
+	(No symbol) [0x0x7ff650875e9e]
+	(No symbol) [0x0x7ff650875630]
+	(No symbol) [0x0x7ff650868243]
+	(No symbol) [0x0x7ff650831431]
+	(No symbol) [0x0x7ff6508321c3]
+	GetHandleVerifier [0x0x7ff650d0d2ad+3051437]
+	GetHandleVerifier [0x0x7ff650d07903+3028483]
+	GetHandleVerifier [0x0x7ff650d2589d+3151261]
+	GetHandleVerifier [0x0x7ff650a5183e+185662]
+	GetHandleVerifier [0x0x7ff650a596ff+218111]
+	GetHandleVerifier [0x0x7ff650a3faf4+112628]
+	GetHandleVerifier [0x0x7ff650a3fca9+113065]
+	GetHandleVerifier [0x0x7ff650a26c78+10616]
+	BaseThreadInitThunk [0x0x7ffbdb25e8d7+23]
+	RtlUserThreadStart [0x0x7ffbdc348d9c+44]
+
+

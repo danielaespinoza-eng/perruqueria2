@@ -40,7 +40,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" panel-name="suite-SuiteMascopet" class="navigator-link">
-              <span class="suite-name border-passed">SuiteMascopet</span>
+              <span class="suite-name border-skipped">SuiteMascopet</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -51,7 +51,7 @@
               <ul>
                 <li>
                   <a href="#" panel-name="test-xml-SuiteMascopet" class="navigator-link ">
-                    <span>C:\Users\TG\eclipse-workspace\Estructura-Base-New_Perruqueria\testng.xml</span>
+                    <span>C:\Users\TG\eclipse-workspace\Estructura-Base-New_Perruqueria2\testng.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -93,21 +93,21 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">1 method,   1 passed</span>
+                    <span class="method-stats">1 method,  1 skipped,  </span>
                   </li>
                   <li>
-                    <span class="method-list-title passed">Passed methods</span>
-                    <span class="show-or-hide-methods passed">
-                      <a href="#" panel-name="suite-SuiteMascopet" class="hide-methods passed suite-SuiteMascopet"> (hide)</a> <!-- hide-methods passed suite-SuiteMascopet -->
-                      <a href="#" panel-name="suite-SuiteMascopet" class="show-methods passed suite-SuiteMascopet"> (show)</a> <!-- show-methods passed suite-SuiteMascopet -->
+                    <span class="method-list-title skipped">Skipped methods</span>
+                    <span class="show-or-hide-methods skipped">
+                      <a href="#" panel-name="suite-SuiteMascopet" class="hide-methods skipped suite-SuiteMascopet"> (hide)</a> <!-- hide-methods skipped suite-SuiteMascopet -->
+                      <a href="#" panel-name="suite-SuiteMascopet" class="show-methods skipped suite-SuiteMascopet"> (show)</a> <!-- show-methods skipped suite-SuiteMascopet -->
                     </span>
-                    <div class="method-list-content passed suite-SuiteMascopet">
+                    <div class="method-list-content skipped suite-SuiteMascopet">
                       <span>
-                        <img src="passed.png" width="3%"/>
+                        <img src="skipped.png" width="3%"/>
                         <a href="#" panel-name="suite-SuiteMascopet" title="test.java.carritocompras.CC_Test" class="method navigator-link" hash-for-method="CC_QA_AgregarProductosAlCarrito(Baño y Peinado, Baño y Corte, Corte de Uñas, 3, Daniela, 2025-02-10, Profesional 2, Rocky, 4, Años, ...)">CC_QA_AgregarProductosAlCarrito(Baño y Peinado, Baño y Corte, Corte de Uñas, 3, Daniela, 2025-02-10, Profesional 2, Rocky, 4, Años, ...)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
-                    </div> <!-- method-list-content passed suite-SuiteMascopet -->
+                    </div> <!-- method-list-content skipped suite-SuiteMascopet -->
                   </li>
                 </ul>
               </div> <!-- suite-section-content -->
@@ -119,9 +119,9 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-SuiteMascopet" class="panel SuiteMascopet">
-          <div class="suite-SuiteMascopet-class-passed">
+          <div class="suite-SuiteMascopet-class-skipped">
             <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
+              <img src="skipped.png"/>
               <span class="class-name">test.java.carritocompras.CC_Test</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
@@ -131,14 +131,69 @@
                   </a> <!-- CC_QA_AgregarProductosAlCarrito(Baño y Peinado, Baño y Corte, Corte de Uñas, 3, Daniela, 2025-02-10, Profesional 2, Rocky, 4, Años, ...) -->
                   <span class="method-name">CC_QA_AgregarProductosAlCarrito</span>
                   <span class="parameters">(Baño y Peinado, Baño y Corte, Corte de Uñas, 3, Daniela, 2025-02-10, Profesional 2, Rocky, 4, Años, Poodle)</span>
+                  <div class="stack-trace">org.openqa.selenium.SessionNotCreatedException: session not created: This version of ChromeDriver only supports Chrome version 138
+Current browser version is 140.0.7339.128 with binary path C:\Program Files\Google\Chrome\Application\chrome.exe
+Build info: version: &apos;3.8.1&apos;, revision: &apos;6e95a6684b&apos;, time: &apos;2017-12-01T18:33:54.468Z&apos;
+System info: host: &apos;DESKTOP-97H2JQF&apos;, ip: &apos;192.168.10.100&apos;, os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.6&apos;
+Driver info: driver.version: ChromeDriver
+remote stacktrace: 	GetHandleVerifier [0x0x7ff650a36f75+76917]
+	GetHandleVerifier [0x0x7ff650a36fd0+77008]
+	(No symbol) [0x0x7ff6507e9dea]
+	(No symbol) [0x0x7ff65082e1df]
+	(No symbol) [0x0x7ff65082d22b]
+	(No symbol) [0x0x7ff650826e2a]
+	(No symbol) [0x0x7ff650822675]
+	(No symbol) [0x0x7ff650875e9e]
+	(No symbol) [0x0x7ff650875630]
+	(No symbol) [0x0x7ff650868243]
+	(No symbol) [0x0x7ff650831431]
+	(No symbol) [0x0x7ff6508321c3]
+	GetHandleVerifier [0x0x7ff650d0d2ad+3051437]
+	GetHandleVerifier [0x0x7ff650d07903+3028483]
+	GetHandleVerifier [0x0x7ff650d2589d+3151261]
+	GetHandleVerifier [0x0x7ff650a5183e+185662]
+	GetHandleVerifier [0x0x7ff650a596ff+218111]
+	GetHandleVerifier [0x0x7ff650a3faf4+112628]
+	GetHandleVerifier [0x0x7ff650a3fca9+113065]
+	GetHandleVerifier [0x0x7ff650a26c78+10616]
+	BaseThreadInitThunk [0x0x7ffbdb25e8d7+23]
+	RtlUserThreadStart [0x0x7ffbdc348d9c+44]
+
+	at org.openqa.selenium.remote.W3CHandshakeResponse.lambda$new$0(W3CHandshakeResponse.java:57)
+	at org.openqa.selenium.remote.W3CHandshakeResponse.lambda$getResponseFunction$2(W3CHandshakeResponse.java:104)
+	at org.openqa.selenium.remote.ProtocolHandshake.lambda$createSession$0(ProtocolHandshake.java:123)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+	at java.base/java.util.Spliterators$ArraySpliterator.tryAdvance(Spliterators.java:1034)
+	at java.base/java.util.stream.ReferencePipeline.forEachWithCancel(ReferencePipeline.java:129)
+	at java.base/java.util.stream.AbstractPipeline.copyIntoWithCancel(AbstractPipeline.java:527)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:513)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+	at java.base/java.util.stream.FindOps$FindOp.evaluateSequential(FindOps.java:150)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.findFirst(ReferencePipeline.java:647)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:126)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:73)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:142)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:601)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:219)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:142)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:181)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:168)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:157)
+	at test.java.GG_BaseTest.setUpDriver(GG_BaseTest.java:154)
+	at test.java.GG_BaseTest.beforeMethodMethod(GG_BaseTest.java:81)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+... Removed 35 stack frames
+</div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-SuiteMascopet-class-passed -->
+          </div> <!-- suite-SuiteMascopet-class-skipped -->
         </div> <!-- panel SuiteMascopet -->
         <div panel-name="test-xml-SuiteMascopet" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\TG\eclipse-workspace\Estructura-Base-New_Perruqueria\testng.xml</span>
+            <span class="header-content">C:\Users\TG\eclipse-workspace\Estructura-Base-New_Perruqueria2\testng.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -194,12 +249,12 @@ data.addRows(1);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'CC_QA_AgregarProductosAlCarrito')
 data.setCell(0, 2, 'test.java.carritocompras.CC_Test')
-data.setCell(0, 3, 68828);
+data.setCell(0, 3, 0);
 window.suiteTableData['SuiteMascopet']= { tableData: data, tableDiv: 'times-div-SuiteMascopet'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 1 minutes</span>
+              <span class="suite-total-time">Total running time: 0 ms</span>
               <div id="times-div-SuiteMascopet">
               </div> <!-- times-div-SuiteMascopet -->
             </div> <!-- times-div -->
@@ -231,20 +286,22 @@ return data;
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-test before -->
               <div class="configuration-method before">
+                <img src="failed.png">
+                </img>
                 <span class="method-name">beforeMethodMethod(chrome, public void test.java.carritocompras.CC_Test.CC_QA_AgregarProductosAlCarrito(java.lang.Strin...)</span>
-                <span class="method-start">1556 ms</span>
+                <span class="method-start">1030 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">CC_QA_AgregarProductosAlCarrito(Baño y Peinado, Baño y Corte, Corte de Uñas, 3, Daniela, 2025-02-10, Profesional 2, Rocky, 4, Años, ...)</span>
-                <span class="method-start">10882 ms</span>
+                <span class="method-start">6764 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
-                <span class="method-name">afterMethodMethod([TestResult name=CC_QA_AgregarProductosAlCarrito status=SUCCESS method=CC_Test.CC_QA_AgregarProducto...)</span>
-                <span class="method-start">80268 ms</span>
+                <span class="method-name">afterMethodMethod</span>
+                <span class="method-start">6770 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-test after">
                 <span class="method-name">afterTestMethod</span>
-                <span class="method-start">80332 ms</span>
+                <span class="method-start">6775 ms</span>
               </div> <!-- configuration-test after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
